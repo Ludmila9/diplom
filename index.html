@@ -7,7 +7,7 @@
 	<meta name="keywords" content="важные, ключевые, слова">
 	<meta name="description" content="краткое описание">
 	
-	<title>Document</title>
+	<title>Diplom project</title>
 
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
@@ -19,75 +19,175 @@
 	<!-- <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css"> -->
 </head>
 <body>
-	<header class="header">
-		<div class="logo"><a href="#" class="ba-logo">Logo</a></div>
-		<nav class="nav">
-			<div class="container">
-				<ul class="nav-menu">
-					<li class="nav-menu__item"><a href="#">Home</a></li>
-					<li class="nav-menu__item"><a href="#">About</a></li>
-					<li class="nav-menu__item"><a href="#">Portfolio</a></li>
-					<li class="nav-menu__item"><a href="#">Services</a></li>
-					<li class="nav-menu__item"><a href="#">Blog</a></li>
-					<li class="nav-menu__item"><a href="#">Contact</a></li>
-				</ul>
+	<header class="head">
+		<div class="head-info">
+			<div class="logo"><a href="#" class="ba-logo"><img src="img/logo.png" alt="logo"></a></div>
+			<div class="head-phone">
+				<!-- <svg class="icon icon-phone">
+					<use xlink:href="#icon-phone-sprite"></use>
+				</svg> -->
+				<img src="img/phone.png" alt="phone"><a href="#">+71 88 569 6822</a>
 			</div>
+		</div>
+			
+		<nav class="head-nav">
+			<ul class="nav-menu">
+				<li class="nav-menu__item"><a href="#">About</a></li>
+				<li class="nav-menu__item"><a href="#">projects</a></li>
+				<li class="nav-menu__item"><a href="#">Blog</a></li>
+				<li class="nav-menu__item"><a href="#">Contact</a></li>
+			</ul>
 		</nav>
-		<button class="nav-btn">
+		<div class="head-soc">
+			<ul class="head-soc-list">	
+				<li class="head-soc__item">
+					<a href="https://www.instagram.com" target="_blank">
+						<span class="visually-hidden">instagram</span>
+						<svg class="icon-social">
+							<use xlink:href="#icon-instagram-sprite"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="head-soc__item">
+					<a href="https://www.facebook.com/" target="_blank">
+						<span class="visually-hidden">facebook</span>
+						<svg class="icon-social">
+							<use xlink:href="#icon-facebook-sprite"></use>
+						</svg>
+					</a>
+				</li>
+				<li class="head-soc__item">
+					<a href="https://twitter.com" target="_blank">
+						<span class="visually-hidden">twitter</span>
+						<svg class="icon-social">
+							<use xlink:href="#icon-twitter-sprite"></use>
+						</svg>
+					</a>
+				</li>
+			
+				<li class="head-soc__item">
+					<a href="https://www.behance.net" target="_blank">
+						<span class="visually-hidden">behance</span>
+						<svg class="icon-social">
+							<use xlink:href="#icon-behance-sprite"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		</div>
+		<button class="head-nav-btn" style="display: none;">
 			<span class="nav-btn__item"></span>
 			<span class="nav-btn__item"></span>
 			<span class="nav-btn__item"></span>
 		</button>
-		<h1>Welcome To Sigxak</h1>
-		<p>Creative Fashion Stylist</p>
+		
 	</header>
+
+<!-- <h1>Gradient text</h1> -->
 
 	<main>
 		<section class="hero">
 			<div class="container">
-
+				<img src="img/10x.png" alt="title">
+				<h1 class="hero__title">your presence</h1>
+			</div>
+			<div class="hero__dots">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
 		</section>
+
 		<section class="about">
 			<div class="container">
+				<button class="about__btn">
+					<svg class="icon-btn-play">
+						<use xlink:href="#btn-play-sprite"></use>
+					</svg>
+				</button>
+				<h2 class="title about__title">We're a designer & a developer who love building cool stuff with our clients.</h2>
+				<img class="about__img" src="img/signature.png" alt="signature">
+			</div>
+		</section>
+		
+		<section class="product">
+			<div class="container">
+				<div class="product-card product-card_left">
+					<div class="product-box__nav_left col-1">
+						<svg class="icon-nav">
+							
+						</svg>
+					</div>
+					<div class="product-box__img_left col-5">
+						<div class="product__img-bg_left">
+							<img src="img/product-card-bg-1.jpg" alt="man">
+						</div>
+						<div class="product__img_left">
+							<img src="img/product-card-1.jpg" alt="product">
+						</div>
+						<div class="product__num_left">01 <span>/05</span></div>
+					</div>
+					<div class="product-box__about_left col-6">
+						<div class="product__title">
+							<p>Strategy & Creative</p> 
+							<p>We design and build digital products, and services we believe in.</p>
+						</div>
+						<div class="product__text"><p>Strategy is not something you can retrospectively apply in order to make irrelevant ideas seem coherent strategists start out with a clear approach to ensure our creative proposal will match your business needs. </p></div>
+						<button class="btn product__btn">Learn more</button>
+					</div>
+				</div>
 
+				<div class="product-card product-card_right">
+					<div class="product-box__about_right col-6">
+						<div class="product__title">
+							<p>We are bunch of super-skilled guys and gals who love to create websites.</p>
+						</div>
+						<div class="product__text"><p>Filema Rodion proposes individual, airtight packages that keep the product's characteristics unchanged for treats for the marriage, baptism and every social event.</p> </div>
+						<button class="btn product__btn">Learn more</button>
+					</div>
+					<div class="product-box__nav_right col-1">
+						<svg class="icon-nav">
+							
+						</svg>
+					</div>
+					<div class="product-box__img_right col-5">
+						<div class="product__img-bg_right">
+							<img src="img/product-card-bg-2.jpg" alt="man">
+							<div class="product__num_right">02 <span>/05</span></div>
+						</div>
+						<div class="product__img_right">
+							<img src="img/product-card-2.jpg" alt="product">
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<section class="potrfolio">
+		<section class="portfolio">
 			<div class="container">
-
-			</div>
-		</section>
-
-		<section class="gallery">
-			<div class="container">
-				<div class="gallery-content">
-					<a href="#" class="gallery-item-big"><img src="img/" alt="" ></a>
-					<a href="#" class="gallery-item1"><img src="img/" alt="" ></a>
-					<a href="#" class="gallery-item2"><img src="img/" alt="" ></a>
-					<a href="#" class="gallery-item3"><img src="img/" alt="" ></a>
-					<a href="#" class="gallery-item4"><img src="img/" alt="" ></a>
-                </div>
-			</div>
-		</section>
-
-		<section class="services">
-			<div class="container">
-
-			</div>
-		</section>
-
-		<section class="blog">
-			<div class="container">
-
+				<div class="portfolio-wrapper">
+					<h3 class="title-small portfolio__title-small">Selected Projects</h3>
+					<div class="portfolio-list">
+						<div class="portfolio__item">
+							<div class="portfolio-box">
+								<div class="portfolio__img"><img src="img/portfolio-1.jpg" alt=""></div>
+								<div class="portfolio__title">End of Thino</div>
+								<div class="portfolio__text">When the switch is on, it cuts off the data transmission between the charging device and the source</div>
+							</div>
+							<div class="btn portfolio__btn">Shop Now</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
 		<section class="expert">
 			<div class="container">
 				<div class="expert-wrap">
-					<p class="text expert__text">services we specialize in</p>
+					<h3 class="title-small expert__title-small">services we specialize in</h3>
 					<h2 class="title expert__title">Expert input for maximum growth.</h2>
 					<ul class="expert-nav">
 						<li class="expert-nav__item"><a data-filter=".expert-nav--all" href="#">all</a></li>
@@ -135,17 +235,19 @@
 
 		<section class="contact">
 			<div class="container">
-				<p class="contact__text">If you'd like to get in touch, </p>
-				<p class="contact__text">you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></p>
+				<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
 
 			</div>
 		</section>
-
+		
+		<svg class="icon" viewBox="0 0 15 30">
+			
+		</svg>
 	</main>
 
 	<footer>
 		<section class="footer-logo">
-			<a href="#"><img src="img/footer-logo.png" alt="logo"></a>
+			<a href="#"><img src="img/logo.png" alt="logo"></a>
 		</section>
 		<section class="footer-navigation">
 			<div class="container">
@@ -163,36 +265,36 @@
 		<section class="footer-info">
 			<div class="container">
 				<div class="footer-info-soc">
-					<ul class="footer-soc-list">
-						<li class="footer-soc-list__item">
-							<a href="https://support.google.com/plus" target="_blank">
-								<span class="visually-hidden">google+</span>
-								<svg class="icon icon-google">
-									<use xlink:href="#icon-google-sprite"></use>
+					<ul class="footer-soc-list">	
+						<li class="footer-soc__item">
+							<a href="https://www.instagram.com" target="_blank">
+								<span class="visually-hidden">instagram</span>
+								<svg class="icon-social">
+									<use xlink:href="#icon-instagram-sprite"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="footer-soc-list__item">
+						<li class="footer-soc__item">
 							<a href="https://www.facebook.com/" target="_blank">
 								<span class="visually-hidden">facebook</span>
-								<svg class="icon icon-facebbok">
-									<use xlink:href="#icon-facebbok-sprite"></use>
+								<svg class="icon-social">
+									<use xlink:href="#icon-facebook-sprite"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="footer-soc-list__item">
+						<li class="footer-soc__item">
 							<a href="https://twitter.com" target="_blank">
 								<span class="visually-hidden">twitter</span>
-								<svg class="icon icon-twitter">
+								<svg class="icon-social">
 									<use xlink:href="#icon-twitter-sprite"></use>
 								</svg>
 							</a>
 						</li>
-						<li class="footer-soc-list__item">
-							<a href="https://www.instagram.com" target="_blank">
-								<span class="visually-hidden">instagram</span>
-								<svg class="icon icon-instagram">
-									<use xlink:href="#icon-instagram-sprite"></use>
+						<li class="footer-soc__item">
+							<a href="https://www.behance.net" target="_blank">
+								<span class="visually-hidden">behance</span>
+								<svg class="icon-social">
+									<use xlink:href="#icon-behance-sprite"></use>
 								</svg>
 							</a>
 						</li>
@@ -200,15 +302,44 @@
 				</div>
 			</div>
 		</section>
-
-		<section class="footer-copy">
-			<p>Copyright© 2016 XakBoX. All rights reserved.</p>
-		</section>
 	</footer>
 
 	
 
 <svg style="display: none;">
+	<symbol id="icon-phone-sprite" width="130" height="21" viewBox="0 0 130 21">
+		<g>
+			<path class="icon-expert" d="M421.216,195.504c-5.092-26.101-17.723-49.836-36.526-68.64c-18.804-18.803-42.54-31.434-68.641-36.527    c-11.21-2.189-22.073,5.128-24.261,16.339c-2.187,11.212,5.128,22.073,16.339,24.26c36.847,7.188,65.3,35.642,72.489,72.489    c1.927,9.874,10.581,16.726,20.278,16.726c1.313,0,2.645-0.125,3.984-0.387C416.088,217.577,423.403,206.715,421.216,195.504z"/>
+			<path class="icon-expert" d="M511.422,196.929c-5.629-50.096-28.373-97.304-64.042-132.927C411.712,28.378,364.475,5.694,314.371,0.128    c-11.355-1.261-21.578,6.92-22.839,18.272c-1.261,11.353,6.919,21.578,18.272,22.84c84.961,9.438,150.966,75.36,160.512,160.31    c1.188,10.566,10.139,18.374,20.527,18.374c0.771,0,1.552-0.043,2.336-0.131C504.53,218.516,512.698,208.281,511.422,196.929z"/>
+			<path class="icon-expert" d="M432.59,312.566c-0.062-0.008-0.124-0.017-0.186-0.025c-20.013-2.639-39.751-7.557-58.619-14.596    c-23.91-8.99-51.103-3.191-69.27,14.772c-0.028,0.028-0.056,0.055-0.083,0.083l-17.148,17.148    c-42.633-26.924-78.756-63.047-105.679-105.679l17.149-17.149c0.027-0.028,0.054-0.055,0.082-0.083    c17.964-18.166,23.762-45.356,14.79-69.223c-7.057-18.914-11.974-38.653-14.614-58.666c-0.007-0.063-0.017-0.127-0.026-0.19    c-4.591-32.478-32.782-56.734-65.548-56.467H66.053c-1.943,0.002-3.912,0.091-5.853,0.267    C24.143,26.016-2.541,58.001,0.718,94.058c0.01,0.108,0.02,0.215,0.032,0.323c7.684,72.354,32.649,142.88,72.197,203.955    c35.892,56.461,84.701,105.269,141.162,141.164c60.792,39.406,130.99,64.369,203.013,72.196c0.127,0.015,0.254,0.027,0.38,0.038    c1.961,0.176,3.949,0.266,5.921,0.266c0.083,0,0.165,0,0.247,0.001c36.204-0.148,65.538-29.722,65.391-65.841v-67.233    C489.746,345.714,465.515,317.211,432.59,312.566z M447.698,378.695v67.548c0.055,13.396-10.8,24.338-24.19,24.393    c-0.715-0.004-1.425-0.027-2.135-0.086c-65.578-7.161-129.488-29.914-184.837-65.808c-0.053-0.035-0.107-0.069-0.161-0.103    c-51.429-32.68-95.885-77.137-128.565-128.565c-0.032-0.051-0.064-0.101-0.097-0.153C71.683,220.306,48.928,156.086,41.902,90.193    C40.779,76.91,50.63,65.155,63.923,63.954c0.717-0.064,1.443-0.098,2.145-0.098h67.463c0.146-0.001,0.294-0.003,0.443-0.002    c12.021,0,22.322,8.905,24.044,20.819c3.05,23.063,8.721,45.806,16.871,67.649c3.319,8.832,1.189,18.869-5.427,25.591    l-28.517,28.517c-6.583,6.582-7.956,16.753-3.354,24.847c33.837,59.508,83.177,108.847,142.685,142.685    c8.094,4.6,18.264,3.23,24.848-3.355l28.512-28.512c6.72-6.621,16.765-8.752,25.642-5.415    c21.799,8.134,44.547,13.805,67.61,16.855c12.18,1.757,21.122,12.339,20.816,24.647    C447.7,378.353,447.698,378.524,447.698,378.695z"/>
+		</g>
+	</symbol>
+	<symbol id="icon-instagram-sprite" viewBox="0 0 32 32">
+		<g>
+			<path class="icon-soc" d="M28,0H4C1.741,0,0,1.741,0,4v24c0,2.258,1.741,4,4,4h24c2.258,0,4-1.742,4-4V4C32,1.741,30.258,0,28,0z M16.023,9.714   c3.549,0,6.425,2.787,6.425,6.226c0,3.437-2.876,6.226-6.425,6.226c-3.546,0-6.423-2.789-6.423-6.226   C9.601,12.501,12.478,9.714,16.023,9.714z M28,27c0,0.701-0.3,1-1,1H5c-0.699,0-1-0.299-1-1V13l2.493,0.542   c-0.267,0.87-0.413,1.79-0.413,2.745c0,5.318,4.454,9.634,9.943,9.634c5.492,0,9.944-4.315,9.944-9.634   c0-0.955-0.145-1.875-0.412-2.745L28,13V27z M28,9c0,0.553-0.447,1-1,1h-4c-0.553,0-1-0.447-1-1V5c0-0.553,0.447-1,1-1h4   c0.553,0,1,0.447,1,1V9z"/>
+		</g>
+	</symbol>
+	<symbol id="icon-facebook-sprite" viewBox="0 0 512 512">
+		<path class="icon-soc" d="M304,383c0,40.2-0.1,80.3,0.1,120.5c0,4.4-1.2,5.6-5.6,5.5c-34.2-0.2-68.3-0.2-102.5,0   c-4.7,0-6.2-1.1-6.2-6c0.2-79.7,0.1-159.3,0.1-239c0-8,0.9-7-7.3-7.1c-14.5,0-29-0.1-43.5,0.1c-3.5,0-4.5-1.1-4.5-4.6   c0.1-25.3,0.1-50.7,0-76c0-3.5,1-4.6,4.5-4.5c15.2,0.2,30.3-0.1,45.5,0.2c4.1,0.1,5.4-1,5.4-5.3c-0.2-21.3,0-42.7-0.1-64   c-0.1-17.7,2.6-34.8,11.5-50.4c9.6-17,24-28.7,41.8-36.3c15-6.4,30.8-9.4,47-10.3c32.1-1.8,64.3-0.3,96.4-0.9   c3.6-0.1,4.5,1.2,4.5,4.6c-0.1,26.3-0.1,52.7,0,79c0,4-1.5,4.6-5,4.6c-18.5-0.1-37-0.1-55.5-0.1c-15.4,0-26.5,11.1-26.5,26.3   c0,15.7,0.2,31.3-0.1,47c-0.1,4.5,1.4,5.6,5.7,5.6c25.3-0.2,50.7,0,76-0.2c4.2,0,5.6,1.2,5.1,5.4c-1.5,12.9-2.8,25.8-4.2,38.7   c-1.3,12.4-3.5,24.7-5.5,37c-0.6,3.5-1.7,4.3-4.9,4.3c-21.7-0.1-43.3-0.1-65,0c-8.5,0-7.3-1.1-7.3,7.5C304,304,304,343.5,304,383z"/>
+	</symbol>
+	<symbol id="icon-twitter-sprite" viewBox="0 0 128 128">
+		<path class="icon-soc" d="M128,23.294    c-4.703,2.142-9.767,3.59-15.079,4.237c5.424-3.328,9.587-8.606,11.548-14.892c-5.079,3.082-10.691,5.324-16.687,6.526    c-4.778-5.231-11.608-8.498-19.166-8.498c-14.493,0-26.251,12.057-26.251,26.927c0,2.111,0.225,4.16,0.676,6.133    C41.217,42.601,21.871,31.892,8.91,15.582c-2.261,3.991-3.554,8.621-3.554,13.552c0,9.338,4.636,17.581,11.683,22.412    c-4.297-0.131-8.355-1.356-11.901-3.359v0.331c0,13.051,9.053,23.937,21.074,26.403c-2.201,0.632-4.523,0.948-6.92,0.948    c-1.69,0-3.343-0.162-4.944-0.478c3.343,10.694,13.035,18.483,24.53,18.691c-8.986,7.227-20.315,11.533-32.614,11.533    c-2.119,0-4.215-0.123-6.266-0.37c11.623,7.627,25.432,12.088,40.255,12.088c48.309,0,74.717-41.026,74.717-76.612    c0-1.171-0.023-2.342-0.068-3.49C120.036,33.433,124.491,28.695,128,23.294" />
+	</symbol>
+	<symbol id="icon-behance-sprite" viewBox="0 0 512 512">
+		<g>
+			<path class="icon-soc" d="M169.4,203c12.1,0,23.1,1,33.1,3.2c9.9,2.1,18.4,5.6,25.6,10.5c7.1,4.8,12.6,11.3,16.5,19.3   s5.8,18,5.8,29.8c0,12.8-2.9,23.4-8.7,32c-5.8,8.5-14.4,15.5-25.9,20.9c15.6,4.5,27.2,12.4,34.8,23.6c7.7,11.3,11.5,24.8,11.5,40.7   c0,12.9-2.5,23.9-7.4,33.2c-5,9.4-11.7,17.1-20.1,23c-8.4,5.9-18,10.3-28.8,13.2c-10.7,2.8-21.8,4.3-33.1,4.3H49.9V203H169.4z    M162.2,305.4c9.9,0,18.1-2.3,24.6-7.1c6.4-4.7,9.5-12.4,9.5-23.1c0-5.9-1-10.8-3.1-14.6c-2.2-3.8-5-6.7-8.6-8.8   c-3.6-2.2-7.6-3.6-12.3-4.5c-4.6-0.9-9.4-1.3-14.4-1.3h-52.2v59.3h56.5V305.4z M165.3,413.4c5.5,0,10.7-0.5,15.7-1.6   s9.4-2.8,13.2-5.4c3.7-2.5,6.8-5.8,9.1-10.1c2.3-4.3,3.3-9.8,3.3-16.4c0-13.1-3.7-22.3-11-28c-7.3-5.6-17.1-8.3-29.1-8.3h-60.7   v69.8L165.3,413.4L165.3,413.4z" id="XMLID_102_"/>
+			<path class="icon-soc" d="M341.8,412.5c7.6,7.4,18.5,11.1,32.6,11.1c10.2,0,19-2.6,26.3-7.7s11.8-10.6,13.5-16.3h44.4   c-7.1,22.1-18,37.9-32.7,47.4c-14.6,9.5-32.4,14.3-53.2,14.3c-14.5,0-27.5-2.3-39.2-7s-21.4-11.2-29.6-19.7   c-8-8.6-14.2-18.7-18.6-30.6c-4.4-11.8-6.6-24.9-6.6-39.1c0-13.7,2.3-26.6,6.8-38.4c4.6-11.9,10.9-22.2,19.2-30.8   c8.3-8.7,18.2-15.5,29.8-20.5c11.5-5,24.2-7.5,38.3-7.5c15.5,0,29.1,3,40.8,9.1c11.6,6,21.1,14.1,28.6,24.3   c7.5,10.2,12.8,21.8,16.1,34.8c3.3,13,4.5,26.6,3.5,40.9H329.3C329.3,391.4,334.2,405.2,341.8,412.5z M399.7,316.1   c-6-6.6-16.1-10.2-28.5-10.2c-8.1,0-14.7,1.4-20.1,4.1c-5.2,2.7-9.5,6.1-12.8,10.1c-3.3,4.1-5.5,8.4-6.8,12.9s-2.1,8.5-2.3,12.1   h82.1C410.2,332.3,405.8,322.8,399.7,316.1z" id="XMLID_99_"/>
+			
+		</g>
+	</symbol>
+	<symbol id="btn-play-sprite" viewBox="0 0 15 30">
+		<g class="icon-play">
+			<line x1="0" y1="0" x2="0" y2="30" />
+			<line x1="0" y1="0" x2="15" y2="15" />
+			<line x1="0" y1="30" x2="15" y2="15" />
+		</g>
+	</symbol>
+	
 	<symbol id="expert-agility" width="64" height="65" viewBox="0 0 64 65">
 		<path class="icon-expert" d="M254.741,6936.56H229.434a1.266,1.266,0,0,0-1.259,1.27,2.112,2.112,0,0,1-2.1,2.12h-4.185a2.112,2.112,0,0,1-2.1-2.12,1.265,1.265,0,0,0-1.259-1.27H198.872v-32.62a2.632,2.632,0,0,1,2.624-2.64H217.2l0.011,0.11-2.617,2.49c-0.008.01-.017,0.01-0.026,0.02a12.182,12.182,0,0,0-3.547,8.63v5.67a1.257,1.257,0,0,0,.748,1.16,1.156,1.156,0,0,0,.512.11,1.273,1.273,0,0,0,.844-0.32l5.51-5.02a1.228,1.228,0,0,0,.73.58,15.981,15.981,0,0,0,4.556.67h0.055a16.018,16.018,0,0,0,4.612-.67,1.252,1.252,0,0,0,.741-0.6l5.54,5.04a1.269,1.269,0,0,0,.844.32,1.159,1.159,0,0,0,.512-0.11,1.259,1.259,0,0,0,.748-1.16v-5.66a12.188,12.188,0,0,0-3.547-8.64l-2.42-2.44,0.023-.18H246.5a2.632,2.632,0,0,1,2.624,2.64v23.28a1.26,1.26,0,1,0,2.519,0v-23.28a5.165,5.165,0,0,0-5.143-5.18H231.323a21.183,21.183,0,0,0-5.367-15.8l-0.221-.25a2.152,2.152,0,0,0-1.592-.71h-0.016a2.108,2.108,0,0,0-1.6.74l-0.417.47a21.3,21.3,0,0,0-5.162,15.55H201.5a5.165,5.165,0,0,0-5.143,5.18v32.62h-3.094a1.266,1.266,0,0,0-1.259,1.27v1.98a7.164,7.164,0,0,0,7.13,7.19h49.74a7.165,7.165,0,0,0,7.13-7.19v-1.98A1.266,1.266,0,0,0,254.741,6936.56Zm-24.733-27.08,0.6-4.81,1.039,1.05a9.648,9.648,0,0,1,2.809,6.84v2.81l-4.656-4.24ZM224,6884.89l0.144-.16a18.649,18.649,0,0,1,4.575,14.74l-0.289,2.31h0l-1.212,9.69h0l-0.129,1.04a14.144,14.144,0,0,1-3.111.35h-0.048a13.559,13.559,0,0,1-3.045-.35l-0.992-9.65-0.111-1.09h0l-0.277-2.69A18.733,18.733,0,0,1,224,6884.89Zm-5.791,26.23-4.669,4.25v-2.82a9.654,9.654,0,0,1,2.8-6.82l1.2-1.14Zm30.658,33.34H199.13a4.632,4.632,0,0,1-4.611-4.65v-0.71h22.929a4.637,4.637,0,0,0,4.443,3.39h4.185a4.639,4.639,0,0,0,4.443-3.39h22.962v0.71h0A4.632,4.632,0,0,1,248.87,6944.46Zm-3.605-40.33h-6.34a1.27,1.27,0,0,0,0,2.54h5.08v24.6H204.417v-24.6h4a1.27,1.27,0,0,0,0-2.54h-5.254a1.266,1.266,0,0,0-1.26,1.27v27.14a1.257,1.257,0,0,0,1.26,1.26h42.107a1.257,1.257,0,0,0,1.259-1.26V6905.4A1.266,1.266,0,0,0,245.265,6904.13Zm-21.265-10a1.27,1.27,0,1,1-1.259,1.27A1.266,1.266,0,0,1,224,6894.13Zm26.388,37.35a1.27,1.27,0,1,1-1.26,1.27A1.266,1.266,0,0,1,250.388,6931.48Zm-29.663-14.23a1.266,1.266,0,0,0-1.259,1.27v5.17a1.26,1.26,0,1,0,2.519,0v-5.17A1.266,1.266,0,0,0,220.725,6917.25Zm6.4-.3a1.266,1.266,0,0,0-1.259,1.27v7.62a1.26,1.26,0,1,0,2.519,0v-7.62A1.266,1.266,0,0,0,227.123,6916.95Z" transform="translate(-192 -6882)"/>
 	</symbol>
@@ -217,8 +348,15 @@
 		 <path class="icon-expert" d="M765.648,6881H748.521a4.811,4.811,0,0,0-4.8,4.81v2.21a1.407,1.407,0,0,0,2.813,0v-2.21a1.988,1.988,0,0,1,1.985-1.99h17.127a1.989,1.989,0,0,1,1.986,1.99v2.21a1.406,1.406,0,0,0,2.812,0v-2.21A4.811,4.811,0,0,0,765.648,6881Zm20.486,11.38H727.866a6.883,6.883,0,0,0-6.866,6.88v12.51a1.4,1.4,0,0,0,1.008,1.35l0.857,0.26v29.51a3.107,3.107,0,0,0,3.1,3.11h62.065a3.107,3.107,0,0,0,3.1-3.11v-29.31l0.849-.24a1.416,1.416,0,0,0,1.016-1.35v-12.73A6.883,6.883,0,0,0,786.134,6892.38Zm-52.585,50.8h-7.582a0.29,0.29,0,0,1-.289-0.29v-7.59h4.044a3.834,3.834,0,0,1,3.827,3.83v4.05Zm54.773-.29a0.29,0.29,0,0,1-.29.29h-7.581v-4.05a3.834,3.834,0,0,1,3.827-3.83h4.044v7.59Zm0-10.41h-4.044a6.65,6.65,0,0,0-6.639,6.65v4.05H736.361v-4.05a6.65,6.65,0,0,0-6.639-6.65h-4.044v-18.27l24.828,7.33v4.53a1.408,1.408,0,0,0,1.407,1.41h10.174a1.408,1.408,0,0,0,1.407-1.41v-4.49l24.828-7.18v18.08h0Zm-35-7.82v-6.86h7.362v6.86h-7.362Zm36.868-13.73-26.694,7.72v-2.26a1.407,1.407,0,0,0-1.406-1.41H751.913a1.408,1.408,0,0,0-1.407,1.41v2.22l-26.694-7.89v-11.46a4.061,4.061,0,0,1,4.054-4.06h5.683v4.88a1.406,1.406,0,1,0,2.812,0v-4.88H777.13v4.88a1.406,1.406,0,1,0,2.812,0v-4.88h6.192a4.06,4.06,0,0,1,4.053,4.06v11.67h0Zm-11.65-6.83a1.41,1.41,0,1,1-1.407,1.41A1.414,1.414,0,0,1,778.537,6904.1Zm-43.583,0a1.41,1.41,0,1,1-1.406,1.41A1.413,1.413,0,0,1,734.954,6904.1Z" transform="translate(-721 -6881)"/>
 	</symbol>
 
-	<symbol id="expert-chat" width="58" height="65" viewBox="0 0 58 65">
-		<image class="icon-expert" width="58" height="65" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABBCAQAAAAqV3+hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBxQMGxX8rglBAAAEU0lEQVRYw+2Ya4hVVRTHf/c6PmlMBxVHJdQULSdNSo2ihyRiI/UhygxCQumDfRKEyiIYSUkokjApLCqaMtKStBjT0aLUFB9BUz6QKTVErHTUmzOlzp1fHzyduefeuTP3zuMiNGtz4Pz3Wmv/z957nXXWPjEBhrCI2Yyia+UUW1hFLSDe4TkLJUkflpgl/E4RsIPaLp7pcGYCMB5XqLpQCtAeUnUD/qruKAglYqVaF2cEUNPFC9ssNUDfOJeAPgUj7Qc0xhGIFYw0BhgvGF2KdJN2kxaM9Ele4voQlbKM+0NUzjIGh2gMy7kzhxFNqO+2krjGqLo0xB+pTcF9XNU3Q903qsZaGa1CTbQ90zMc5CI7Q/wV9az974nZRD3bQt1GGqjEjs8UcUAElUTQwFZ07Z4pwPkIqougc63ossg1G73dpN2k1yppEdBYML5GIF7UgRrpRkYDJziah08S6IG71BN516+L/Tk8KvzoIuM5+u1Vj+FcVau91WKLLc4w6x30N7cJ7s84oxxxbJZ83Ow3zkpVX0SsDhwTJkx4wL4pLnP8I+hvblelxhec6Qyf9bCqFxwU+LxtvYtFnOwvGX6HjF81ez/y1F+nkFZlOX2tjKzGG6p+G6AT6uciPpHh94XFEgs+fhO5h0FAOVOARbwebPxaHqeBlWF8D2EhsJ0ZaQGyjkeB2zkAjGUGn1AHxFnA8NDmArvZA5C+g72CZRgf4I/VUyn6B1SdkLHzQ02qr+QWTunJ4TLlAOziOgCKgBg9Q/18oJaDGa/CafYBt+X23mRmpJ1UACVUAdATSJIMtdcDx1sc6TjQv72ksJQdwN08D1wBkjSl7AuMbnGkUYG2naRQTgOwnDJOA71SNHuB0UzM8ChlKrA/N9Jsmz1Z1SueUY+m9Jequj/DvjoSfm207Kp54bs1PdL/qqobw1SApW5W9cNck2hryllu8zMnZfRvVfW87/mYj/iOF1XdmnvmzjfRI06zoYUc9VpaddyJpOOttC5Lamz0LYfnMkqs7TNAirzMc8HdAb7jCL9xiX6M5BbuogyABp5hdXujN7P1CL9GHzi1Bf29bgj06zpvefepWut9rdg86J+qbu4c0k2qrrdXG3ZD/EHVNR0nfUrVqhwf8GpdMbtjpEUm1bM5b0R/r6h12S1yqXuXEAeezjnGEywBBjKn/dHbx8a0/JtLO6Pubf9My+kBrMrndQbWAFMY2rKybdLpAHyZJ+kmAOa2l/Qm4CTH8iT9ib8h2++dtkkHk1qgDGVByn+jqPRhPuOC+3pOAiVZLNsMiUPq9hBVqZ9msVyhHg5RTUolnHcgNUXWY1hwtSQjgQGRNWxq2TDf82kiuLLp/splkP/TSfyaJP0HuBiierLv21ngUha/iBSl4RHMixTXcANQRkWAbgYmhygqM4FhoS7qt4XdAMyijNXpNdIepnXRmvbmMn1pACrSZ7qesSlntM6TrSSBRqqZxPf/AjShsTJyJud1AAAAAElFTkSuQmCC"/>
+	<symbol id="expert-chat" width="80" height="80" viewBox="0 0 80 80">
+		<g>
+			<path class="icon-expert" d="M72.571,8.429c2.442,0,4.429,1.987,4.429,4.429v13.571c0,2.442-1.987,4.429-4.429,4.429h-1v1    l0,7.857l-6.343-8.457l-0.3-0.4h-0.5H42.714c-2.442,0-4.429-1.987-4.429-4.429V12.857c0-2.442,1.987-4.429,4.429-4.429H72.571     M72.571,7.429H42.714c-2.998,0-5.429,2.43-5.429,5.429v13.571c0,2.998,2.43,5.429,5.429,5.429h21.714l8.143,10.857l0-10.857h0    c2.998,0,5.429-2.43,5.429-5.429V12.857C78,9.859,75.57,7.429,72.571,7.429L72.571,7.429z"/>
+			<path class="icon-expert" d="M20,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S15.037,41,20,41 M20,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S25.523,40,20,40L20,40z"/>
+			<path class="icon-expert" d="M20,63c7.935,0,14.45,6.194,14.967,14H5.033C5.55,69.194,12.065,63,20,63 M20,62    c-8.837,0-16,7.163-16,16h32C36,69.163,28.837,62,20,62L20,62z"/>
+			<path class="icon-expert" d="M60,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S55.037,41,60,41 M60,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S65.523,40,60,40L60,40z"/>
+			<path class="icon-expert" d="M60,63c7.935,0,14.45,6.194,14.967,14H45.033C45.55,69.194,52.065,63,60,63 M60,62    c-8.837,0-16,7.163-16,16h32C76,69.163,68.837,62,60,62L60,62z"/>
+			<path class="icon-expert" d="M42,3c1.654,0,3,1.346,3,3v18c0,1.654-1.346,3-3,3H18h-0.481l-0.3,0.375L11,35.149V28v-1h-1H6    c-1.654,0-3-1.346-3-3V6c0-1.654,1.346-3,3-3H42 M42,2H6C3.791,2,2,3.791,2,6v18c0,2.209,1.791,4,4,4h4v10l8-10h24    c2.209,0,4-1.791,4-4V6C46,3.791,44.209,2,42,2L42,2z"/>
+		</g>
 	</symbol>
 
 	<symbol id="icon-instagram-sprite" viewBox="0 0 130 21">

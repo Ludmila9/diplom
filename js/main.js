@@ -14,54 +14,54 @@
         // appendDots: '.hero-slider__check',
     });
 
-    $('.hero-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-        console.log(currentSlide);
-      });
+ //    $('.hero-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+ //        console.log(currentSlide);
+ //      });
 
 	  
-	//   add masonry
-	  $('.portfolio-examp').masonry({
-		itemSelector: '.portfolio-item',
-	});
+	// //   add masonry
+	//   $('.portfolio-examp').masonry({
+	// 	itemSelector: '.portfolio-item',
+	// });
 
 
-	// add isotope
-	$('.portfolio-examp').isotope();
+	// // add isotope
+	// $('.portfolio-examp').isotope();
 
-	var filters = [];
+	// var filters = [];
 
-	$('.portfolio-navi').on('click', 'a', function(event) {
-		event.preventDefault();
-		$(this).toggleClass('active');
+	// $('.portfolio-navi').on('click', 'a', function(event) {
+	// 	event.preventDefault();
+	// 	$(this).toggleClass('active');
 
-		var isChecked = $(this).hasClass('active');
+	// 	var isChecked = $(this).hasClass('active');
 
-		var filter = $(this).attr('data-filter');
+	// 	var filter = $(this).attr('data-filter');
 
-		if (isChecked) {
-			addFilter(filter);
-		} else {
-			removeFilter(filter);
-		}
+	// 	if (isChecked) {
+	// 		addFilter(filter);
+	// 	} else {
+	// 		removeFilter(filter);
+	// 	}
 
-		console.log(filters);
-		$('.portfolio-examp').isotope({
-			filter: filters.join(',')
-		});
-	});
+	// 	console.log(filters);
+	// 	$('.portfolio-examp').isotope({
+	// 		filter: filters.join(',')
+	// 	});
+	// });
 
-	function addFilter( filter ) {
-	  if ( filters.indexOf( filter ) == -1 ) {
-	    filters.push( filter );
-	  }
-	}
+	// function addFilter( filter ) {
+	//   if ( filters.indexOf( filter ) == -1 ) {
+	//     filters.push( filter );
+	//   }
+	// }
 
-	function removeFilter( filter ) {
-	  var index = filters.indexOf( filter);
-	  if ( index != -1 ) {
-	    filters.splice( index, 1 );
-	  }
-	}
+	// function removeFilter( filter ) {
+	//   var index = filters.indexOf( filter);
+	//   if ( index != -1 ) {
+	//     filters.splice( index, 1 );
+	//   }
+	// }
 
 	//new slider
 	// $('.ba-slider-new').masonry({
