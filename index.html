@@ -90,15 +90,41 @@
 	<main>
 		<section class="hero">
 			<div class="container">
-				<img src="img/10x.png" alt="title">
-				<h1 class="hero__title">your presence</h1>
+				<div class="hero-slider">
+					<div class="hero-slider-box">
+						<img src="img/10x.png" alt="title">
+						<h1 class="hero__title">your presence</h1>
+					</div>
+					<div class="hero-slider-box">
+						<img src="img/10x.png" alt="title">
+						<h1 class="hero__title">your *** presence</h1>
+					</div>
+					<div class="hero-slider-box">
+						<img src="img/10x.png" alt="title">
+						<h1 class="hero__title">your %%% presence</h1>
+					</div>
+					<div class="hero-slider-box">
+						<img src="img/10x.png" alt="title">
+						<h1 class="hero__title">your @@@ presence</h1>
+					</div>
+				</div>
 			</div>
-			<div class="hero__dots">
+			<!-- <button class="slick-prev">
+				<svg class="icon-slick-prev">
+					<use xlink:href="#aerrow_left-sprite"></use>
+				</svg>
+			</button>
+			<button class="slick-next">
+				<svg class="icon-slick-next">
+					<use xlink:href="#aerrow_right-sprite"></use>
+				</svg>
+			</button> -->
+			<!-- <div class="hero__dots">
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
-			</div>
+			</div> -->
 		</section>
 
 		<section class="about">
@@ -117,9 +143,11 @@
 			<div class="container">
 				<div class="product-card product-card_left">
 					<div class="product-box__nav_left col-1">
-						<svg class="icon-nav">
-							
-						</svg>
+						<button class="product-button_left__arrow">
+							<svg class="icon-nav_left">
+								<use xlink:href="#aerrow_down-sprite"></use>
+							</svg>
+						</button>
 					</div>
 					<div class="product-box__img_left col-5">
 						<div class="product__img-bg_left">
@@ -149,10 +177,13 @@
 						<button class="btn product__btn">Learn more</button>
 					</div>
 					<div class="product-box__nav_right col-1">
-						<svg class="icon-nav">
-							
-						</svg>
+						<button class="product-button_right__arrow">
+							<svg class="icon-nav_right">
+								<use xlink:href="#aerrow_down-sprite"></use>
+							</svg>
+						</button>
 					</div>
+
 					<div class="product-box__img_right col-5">
 						<div class="product__img-bg_right">
 							<img src="img/product-card-bg-2.jpg" alt="man">
@@ -171,11 +202,93 @@
 				<div class="portfolio-wrapper">
 					<h3 class="title-small portfolio__title-small">Selected Projects</h3>
 					<div class="portfolio-list">
-						<div class="portfolio__item">
+						<div class="portfolio__item" onMouseOut="itemGradient()">
 							<div class="portfolio-box">
 								<div class="portfolio__img"><img src="img/portfolio-1.jpg" alt=""></div>
-								<div class="portfolio__title">End of Thino</div>
-								<div class="portfolio__text">When the switch is on, it cuts off the data transmission between the charging device and the source</div>
+								<div class="portfolio-about">
+									<div class="portfolio__title">End of Thino</div>
+									<div class="portfolio__text">When the switch is on, it cuts off the data transmission between the charging device and the source</div>
+								</div>
+								<button class="portfolio__nav">
+									<svg class="icon-more">
+										<use xlink:href="#aerrow_right-sprite"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="btn portfolio__btn">Shop Now</div>
+						</div>
+						<div class="portfolio__item">
+							<div class="portfolio-box">
+								<div class="portfolio__img"><img src="img/portfolio-2.jpg" alt=""></div>
+								<div class="portfolio-about">
+									<div class="portfolio__title">Het Boerenveensche</div>
+									<div class="portfolio__text">Thino has a physical switch that activates its turbo-charging feature</div>
+								</div>
+								<button class="portfolio__nav">
+									<svg class="icon-more">
+										<use xlink:href="#aerrow_right-sprite"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="btn portfolio__btn">Shop Now</div>
+						</div>
+						<div class="portfolio__item">
+							<div class="portfolio-box">
+								<div class="portfolio__img"><img src="img/portfolio-3.jpg" alt=""></div>
+								<div class="portfolio-about">
+									<div class="portfolio__title">Bluerocket</div>
+									<div class="portfolio__text">The World's FIrst VR & AR Phone Case</div>
+								</div>
+								<button class="portfolio__nav">
+									<svg class="icon-more">
+										<use xlink:href="#aerrow_right-sprite"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="btn portfolio__btn">Shop Now</div>
+						</div>
+						<div class="portfolio__item">
+							<div class="portfolio-box">
+								<div class="portfolio__img"><img src="img/portfolio-4.jpg" alt=""></div>
+								<div class="portfolio-about">
+									<div class="portfolio__title">Harmony / Poliform</div>
+									<div class="portfolio__text">This chair joins chaos and order in a symbiotic relationship, full of expression and rhythm</div>
+								</div>
+								<button class="portfolio__nav">
+									<svg class="icon-more">
+										<use xlink:href="#aerrow_right-sprite"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="btn portfolio__btn">Shop Now</div>
+						</div>
+						<div class="portfolio__item">
+							<div class="portfolio-box">
+								<div class="portfolio__img"><img src="img/portfolio-5.jpg" alt=""></div>
+								<div class="portfolio-about">
+									<div class="portfolio__title">Rowenta Studiodry</div>
+									<div class="portfolio__text">Rowenta Studiodry 2nd Generation in 2012</div>
+								</div>
+								<button class="portfolio__nav">
+									<svg class="icon-more">
+										<use xlink:href="#aerrow_right-sprite"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="btn portfolio__btn">Shop Now</div>
+						</div>
+						<div class="portfolio__item">
+							<div class="portfolio-box">
+								<div class="portfolio__img"><img src="img/portfolio-6.jpg" alt=""></div>
+								<div class="portfolio-about">
+									<div class="portfolio__title">Fritsch Durisotti</div>
+									<div class="portfolio__text">Spline Spline is a new way of producing wicker furniture that dramatically</div>
+								</div>
+								<button class="portfolio__nav">
+									<svg class="icon-more">
+										<use xlink:href="#aerrow_right-sprite"></use>
+									</svg>
+								</button>
 							</div>
 							<div class="btn portfolio__btn">Shop Now</div>
 						</div>
@@ -229,20 +342,22 @@
 							<p class="expert-slider__text">We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.</p>
 						</div>
 					</div>
+					<div class="contact">
+						<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
+					</div>
+
+				</div>
 				
 			</div>
+
 		</section>
 
-		<section class="contact">
+		<<!-- section class="contact">
 			<div class="container">
 				<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
 
 			</div>
-		</section>
-		
-		<svg class="icon" viewBox="0 0 15 30">
-			
-		</svg>
+		</section> -->
 	</main>
 
 	<footer>
@@ -301,6 +416,8 @@
 					</ul>
 				</div>
 			</div>
+			
+			
 		</section>
 	</footer>
 
@@ -348,7 +465,7 @@
 		 <path class="icon-expert" d="M765.648,6881H748.521a4.811,4.811,0,0,0-4.8,4.81v2.21a1.407,1.407,0,0,0,2.813,0v-2.21a1.988,1.988,0,0,1,1.985-1.99h17.127a1.989,1.989,0,0,1,1.986,1.99v2.21a1.406,1.406,0,0,0,2.812,0v-2.21A4.811,4.811,0,0,0,765.648,6881Zm20.486,11.38H727.866a6.883,6.883,0,0,0-6.866,6.88v12.51a1.4,1.4,0,0,0,1.008,1.35l0.857,0.26v29.51a3.107,3.107,0,0,0,3.1,3.11h62.065a3.107,3.107,0,0,0,3.1-3.11v-29.31l0.849-.24a1.416,1.416,0,0,0,1.016-1.35v-12.73A6.883,6.883,0,0,0,786.134,6892.38Zm-52.585,50.8h-7.582a0.29,0.29,0,0,1-.289-0.29v-7.59h4.044a3.834,3.834,0,0,1,3.827,3.83v4.05Zm54.773-.29a0.29,0.29,0,0,1-.29.29h-7.581v-4.05a3.834,3.834,0,0,1,3.827-3.83h4.044v7.59Zm0-10.41h-4.044a6.65,6.65,0,0,0-6.639,6.65v4.05H736.361v-4.05a6.65,6.65,0,0,0-6.639-6.65h-4.044v-18.27l24.828,7.33v4.53a1.408,1.408,0,0,0,1.407,1.41h10.174a1.408,1.408,0,0,0,1.407-1.41v-4.49l24.828-7.18v18.08h0Zm-35-7.82v-6.86h7.362v6.86h-7.362Zm36.868-13.73-26.694,7.72v-2.26a1.407,1.407,0,0,0-1.406-1.41H751.913a1.408,1.408,0,0,0-1.407,1.41v2.22l-26.694-7.89v-11.46a4.061,4.061,0,0,1,4.054-4.06h5.683v4.88a1.406,1.406,0,1,0,2.812,0v-4.88H777.13v4.88a1.406,1.406,0,1,0,2.812,0v-4.88h6.192a4.06,4.06,0,0,1,4.053,4.06v11.67h0Zm-11.65-6.83a1.41,1.41,0,1,1-1.407,1.41A1.414,1.414,0,0,1,778.537,6904.1Zm-43.583,0a1.41,1.41,0,1,1-1.406,1.41A1.413,1.413,0,0,1,734.954,6904.1Z" transform="translate(-721 -6881)"/>
 	</symbol>
 
-	<symbol id="expert-chat" width="80" height="80" viewBox="0 0 80 80">
+	<symbol id="expert-chat" viewBox="0 0 80 80">
 		<g>
 			<path class="icon-expert" d="M72.571,8.429c2.442,0,4.429,1.987,4.429,4.429v13.571c0,2.442-1.987,4.429-4.429,4.429h-1v1    l0,7.857l-6.343-8.457l-0.3-0.4h-0.5H42.714c-2.442,0-4.429-1.987-4.429-4.429V12.857c0-2.442,1.987-4.429,4.429-4.429H72.571     M72.571,7.429H42.714c-2.998,0-5.429,2.43-5.429,5.429v13.571c0,2.998,2.43,5.429,5.429,5.429h21.714l8.143,10.857l0-10.857h0    c2.998,0,5.429-2.43,5.429-5.429V12.857C78,9.859,75.57,7.429,72.571,7.429L72.571,7.429z"/>
 			<path class="icon-expert" d="M20,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S15.037,41,20,41 M20,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S25.523,40,20,40L20,40z"/>
@@ -358,7 +475,24 @@
 			<path class="icon-expert" d="M42,3c1.654,0,3,1.346,3,3v18c0,1.654-1.346,3-3,3H18h-0.481l-0.3,0.375L11,35.149V28v-1h-1H6    c-1.654,0-3-1.346-3-3V6c0-1.654,1.346-3,3-3H42 M42,2H6C3.791,2,2,3.791,2,6v18c0,2.209,1.791,4,4,4h4v10l8-10h24    c2.209,0,4-1.791,4-4V6C46,3.791,44.209,2,42,2L42,2z"/>
 		</g>
 	</symbol>
-
+	<symbol id="aerrow_left-sprite" viewBox="0 0 120 30">
+		<g>
+			<line id="icon-slick-aerrow" class="icon-aerrow" x1="00" y1="18" x2="115" y2="18" />
+			<line id="icon-slick-aerrow" class="icon-aerrow" x1="00" y1="18" x2="54" y2="-18" />
+		</g>
+	</symbol>
+	<symbol id="aerrow_right-sprite" viewBox="0 0 120 30">
+		<g>
+			<line id="icon-slick-aerrow" class="icon-aerrow" x1="00" y1="00" x2="115" y2="00" />
+			<line id="icon-slick-aerrow" class="icon-aerrow" x1="85" y1="18" x2="115" y2="0" />
+		</g>
+	</symbol>
+	<symbol id="aerrow_down-sprite" viewBox="0 0 30 115">
+		<g>
+			<line id="icon-aerrow" class="icon-aerrow" x1="00" y1="115" x2="00" y2="00" />
+			<line id="icon-aerrow" class="icon-aerrow" x1="00" y1="115" x2="30" y2="85" />
+		</g>
+	</symbol>
 	<symbol id="icon-instagram-sprite" viewBox="0 0 130 21">
 		<g>
 		</g>
