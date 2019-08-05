@@ -248,7 +248,12 @@ header{
 		&__item{
 			height: 20px;
 			width: 25px;
+			height: 60px;
+			width: 60px;
 			margin-bottom: 40px;
+			& a span{
+				position: relative;
+			}
 		}
 	}
 }
@@ -309,7 +314,7 @@ header{
 		& .slick-prev{
 			width: 105px;
 			height: 105px;
-			background: lighten($dark, 5%);
+			// background: lighten($dark, 5%);
 			&:before{
 				display: none;
 			}
@@ -686,7 +691,7 @@ header{
 			width: 125px;
 			border-width: 125px 125px 0 0;
 			opacity: 1;
-			right: 18px;
+			right: 15px;
 		}
 		// &:before{
 		// 	content: '';
@@ -1098,8 +1103,6 @@ footer{
 		width: 36px;
 		height: 15px;
 		position: absolute;
-		
-
 	}
 	&-slick-aerrow{
 		stroke: $light;
@@ -1139,6 +1142,23 @@ footer{
 		right: -100px;
 		position: absolute;
 	}
+}
+#circle{
+  stroke-dashoffset: -124px;
+  transition: stroke-dashoffset 1.7s;
+}
+.icon-circle{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	// top: -30px;
+	// left: -30px;
+	// top: 50%;
+	// left: 50%;
+	// transform: translate(-50%,-50%);
+}
+#circle.fill{
+    stroke-dashoffset: 0px;
 }
 
 

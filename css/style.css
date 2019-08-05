@@ -98,7 +98,7 @@
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
-  background: #1b2328;
+  background: #13191c;
   color: transparent;
   top: 37%;
   -webkit-transform: translate(0, -50%);
@@ -109,11 +109,17 @@
   outline: none;
   border: 1px solid #111;
   border-radius: 50%;
-  z-index: 10; }
+  z-index: 10;
+  -webkit-transition: background .5s ease;
+  -moz-transition: background .5s ease;
+  -ms-transition: background .5s ease;
+  -o-transition: background .5s ease;
+  transition: background .5s ease; }
   .slick-prev:hover, .slick-prev:focus,
   .slick-next:hover,
   .slick-next:focus {
     outline: none;
+    background: #192125;
     color: transparent; }
     .slick-prev:hover:before, .slick-prev:focus:before,
     .slick-next:hover:before,
@@ -128,7 +134,7 @@
     font-size: 20px;
     line-height: 1;
     color: #111;
-    opacity: 0.75;
+    opacity: 0.9;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
@@ -195,7 +201,7 @@
           opacity: 1; }
     .slick-dots li.slick-active button {
       background-color: #ed751b;
-      opacity: 0.75; }
+      opacity: 0.9; }
       .slick-dots li.slick-active button:after {
         border: 1px solid #ed751b; }
 
@@ -885,7 +891,11 @@ header {
     .head-soc__item {
       height: 20px;
       width: 25px;
+      height: 60px;
+      width: 60px;
       margin-bottom: 40px; }
+      .head-soc__item a span {
+        position: relative; }
 
 .nav-menu {
   display: -webkit-box;
@@ -940,8 +950,7 @@ header {
     background: rgba(255, 255, 255, 0.5); }
   .hero-slider .slick-prev {
     width: 105px;
-    height: 105px;
-    background: #1b2328; }
+    height: 105px; }
     .hero-slider .slick-prev:before {
       display: none; }
   .hero-slider-box {
@@ -1310,7 +1319,7 @@ header {
       width: 125px;
       border-width: 125px 125px 0 0;
       opacity: 1;
-      right: 18px; }
+      right: 15px; }
   .portfolio-box {
     width: 485px;
     height: 635px;
@@ -2098,6 +2107,20 @@ footer {
     bottom: 20px;
     right: -100px;
     position: absolute; }
+
+#circle {
+  stroke-dashoffset: -124px;
+  -webkit-transition: stroke-dashoffset 1.7s;
+  -o-transition: stroke-dashoffset 1.7s;
+  transition: stroke-dashoffset 1.7s; }
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  position: absolute; }
+
+#circle.fill {
+  stroke-dashoffset: 0px; }
 
 /*  Картинка вместо цвета текста css
 h1 {
