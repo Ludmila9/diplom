@@ -1132,14 +1132,15 @@ header {
     position: relative;
     margin-bottom: 70px; }
   .product-button_left__arrow, .product-button_right__arrow {
-    width: 120px;
+    width: 125px;
     height: 225px;
     position: absolute;
     padding: 0;
     background: transparent;
     border: none;
     outline-style: none;
-    z-index: 10; }
+    z-index: 10;
+    overflow: hidden; }
   .product-button_left__arrow {
     left: 0; }
   .product-button_right__arrow {
@@ -1157,7 +1158,7 @@ header {
     background: -webkit-linear-gradient(left, #ac378e, #372b73);
     background: -o-linear-gradient(left, #ac378e, #372b73);
     background: linear-gradient(to right, #ac378e, #372b73);
-    right: -10px; }
+    right: -13px; }
   .product-box__img_left, .product-box__img_right {
     position: relative;
     margin-top: 15px; }
@@ -1348,19 +1349,21 @@ header {
     position: relative;
     -webkit-animation-name: background-before;
     animation-name: background-before;
-    -webkit-animation-duration: .5s;
-    animation-duration: .5s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
-    -webkit-animation-timing-function: -out;
-    animation-timing-function: -out;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     -webkit-animation-direction: normal;
     animation-direction: normal; }
     .portfolio__item:hover {
       -webkit-animation-name: background;
-      animation-name: background; }
+      animation-name: background;
+      -webkit-animation-duration: .5s;
+      animation-duration: .5s; }
     .portfolio__item:hover .portfolio__btn {
       height: 0px; }
     .portfolio__item:hover .portfolio__nav {
@@ -1385,7 +1388,47 @@ header {
     -ms-flex-pack: center;
     justify-content: center;
     -ms-flex-line-pack: justify;
-    align-content: space-between; }
+    align-content: space-between;
+    -webkit-transition: -webkit-transform 1.5s ease;
+    transition: -webkit-transform 1.5s ease;
+    -o-transition: transform 1.5s ease;
+    transition: transform 1.5s ease;
+    transition: transform 1.5s ease, -webkit-transform 1.5s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute; }
+  .portfolio-box-back {
+    width: 485px;
+    height: 635px;
+    background-color: transparent;
+    padding: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-transition: -webkit-transform 1.5s ease;
+    transition: -webkit-transform 1.5s ease;
+    -o-transition: transform 1.5s ease;
+    transition: transform 1.5s ease;
+    transition: transform 1.5s ease, -webkit-transform 1.5s ease;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: absolute; }
   .portfolio__img {
     width: 380px;
     height: 380px;
@@ -1399,17 +1442,28 @@ header {
       object-position: center; }
   .portfolio-about {
     margin: 20px 0; }
-  .portfolio__title {
+  .portfolio__title, .portfolio__title-back {
     font-family: 'Proxima Nova Semibold', Arial, serif;
     font-size: 30px;
     line-height: 32px;
-    color: #000;
-    margin: 10px 0; }
-  .portfolio__text {
+    margin: 10px 0;
+    max-height: 64px;
+    overflow: hidden; }
+  .portfolio__title {
+    color: #000; }
+  .portfolio__title-back {
+    color: #fff; }
+  .portfolio__text, .portfolio__text-back {
     font-family: 'Proxima Nova Regular', Arial, serif;
     font-size: 16px;
     line-height: 24px;
-    color: #000; }
+    overflow: hidden; }
+  .portfolio__text {
+    color: #000;
+    max-height: 48px; }
+  .portfolio__text-back {
+    color: #fff;
+    max-height: 360px; }
   .portfolio__nav {
     content: '';
     display: inline-block;
@@ -1440,6 +1494,14 @@ header {
     -o-transition: opacity .4s ease, width .2s ease, height .2s ease;
     transition: opacity .4s ease, width .2s ease, height .2s ease;
     z-index: 10; }
+  .portfolio__btn-back {
+    width: 200px;
+    line-height: 55px;
+    background: -webkit-gradient(linear, left top, right top, from(#e84b37), to(#ee7d16));
+    background: -webkit-linear-gradient(left, #e84b37, #ee7d16);
+    background: -o-linear-gradient(left, #e84b37, #ee7d16);
+    background: linear-gradient(to right, #e84b37, #ee7d16);
+    margin: 20px auto; }
 
 @-webkit-keyframes background {
   0% {
@@ -1646,6 +1708,14 @@ header {
     background: -webkit-linear-gradient(right, rgba(211, 81, 112, 0), rgba(95, 1, 201, 0));
     background: -o-linear-gradient(right, rgba(211, 81, 112, 0), rgba(95, 1, 201, 0));
     background: linear-gradient(to left, rgba(211, 81, 112, 0), rgba(95, 1, 201, 0)); } }
+
+.portfolio__item:hover .portfolio-box {
+  -webkit-transform: rotateY(-180deg) translateZ(1px);
+  transform: rotateY(-180deg) translateZ(1px); }
+
+.portfolio__item:hover .portfolio-box-back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
 
 .expert {
   margin: 50px 0;
@@ -1983,7 +2053,8 @@ header {
 
 .contact {
   margin: 400px 0 50px;
-  text-align: center; }
+  text-align: center;
+  z-index: 50; }
   .contact__text {
     font-family: 'Playfair Display', Arial, serif;
     font-size: 70px;
@@ -2334,8 +2405,128 @@ footer {
   display: -ms-flexbox;
   display: flex; }
 
-.open {
-  height: auto;
-  opacity: 1; }
+.product-button-side:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#fff));
+  background: -webkit-linear-gradient(left, transparent, #fff);
+  background: -o-linear-gradient(left, transparent, #fff);
+  background: linear-gradient(to right, transparent, #fff);
+  -webkit-animation: animate-span1 1s linear infinite;
+  animation: animate-span1 1s linear infinite;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
+
+@-webkit-keyframes animate-span1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); } }
+
+@keyframes animate-span1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); } }
+
+.product-button-side:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+  background: -webkit-linear-gradient(top, transparent, #fff);
+  background: -o-linear-gradient(top, transparent, #fff);
+  background: linear-gradient(to bottom, transparent, #fff);
+  -webkit-animation: animate-span2 1s linear infinite;
+  animation: animate-span2 1s linear infinite; }
+
+@-webkit-keyframes animate-span2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); } }
+
+@keyframes animate-span2 {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); } }
+
+.product-button-side:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#fff));
+  background: -webkit-linear-gradient(right, transparent, #fff);
+  background: -o-linear-gradient(right, transparent, #fff);
+  background: linear-gradient(to left, transparent, #fff);
+  -webkit-animation: animate-span3 1s linear infinite;
+  animation: animate-span3 1s linear infinite;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
+
+@-webkit-keyframes animate-span3 {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+
+@keyframes animate-span3 {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+
+.product-button-side:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fff));
+  background: -webkit-linear-gradient(bottom, transparent, #fff);
+  background: -o-linear-gradient(bottom, transparent, #fff);
+  background: linear-gradient(to top, transparent, #fff);
+  -webkit-animation: animate-span4 1s linear infinite;
+  animation: animate-span4 1s linear infinite; }
+
+@-webkit-keyframes animate-span4 {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+@keyframes animate-span4 {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%); }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); } }
+
+.product-card_right .product-button-side:nth-child(4),
+.product-card_left .product-button-side:nth-child(2) {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

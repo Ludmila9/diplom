@@ -511,7 +511,7 @@ header{
 	}
 	&-button_left__arrow,
 	&-button_right__arrow{
-		width: 120px;
+		width: 125px;
 		height: 225px;
 		position: absolute;
 		padding: 0;
@@ -519,6 +519,7 @@ header{
 		border: none;
 		outline-style: none;
 		z-index: 10;
+		overflow: hidden;
 	}
 	&-button_left__arrow{
 		left: 0;
@@ -540,7 +541,7 @@ header{
 		}
 		&__nav_right{
 			background: linear-gradient(to right, rgba(172, 55, 142, 1), rgba(55, 43, 115, 1));
-			right: -10px;
+			right: -13px;
 		}
 		&__img_left,
 		&__img_right{
@@ -723,13 +724,15 @@ header{
 		margin: 20px 0 100px;
 		position: relative;
 		animation-name: background-before;
-		animation-duration: .5s;
+		animation-duration: 1.5s;
 		animation-iteration-count: 1;
-		animation-timing-function:  -out;
+		animation-timing-function: ease-in-out;
 		animation-fill-mode: forwards;
 		animation-direction: normal;
 		&:hover{
 			animation-name: background;
+			animation-duration: .5s;
+			
 			// animation-duration: .6s;
 			// animation-iteration-count: 1;
 			// animation-timing-function:  -out;
@@ -785,6 +788,27 @@ header{
 		flex-direction: column;
 		justify-content: center;
 		align-content: space-between;
+		transition: transform 1.5s ease;
+		backface-visibility: hidden;
+		transform-style: preserve-3d;
+		position: absolute;
+	}
+	&-box-back{
+		width: 485px;
+		height: 635px;
+		// background: linear-gradient(to left, rgba(211, 81, 112, 1), rgba(95, 1, 201, 1));
+		background-color: transparent;
+		padding: 50px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: space-between;
+		transition: transform 1.5s ease;
+		transform: rotateY(180deg);
+		backface-visibility: hidden;
+		transform-style: preserve-3d;
+		position: absolute;
 	}
 	&__img{
 		width: 380px;
@@ -800,18 +824,36 @@ header{
 	&-about{
 		margin: 20px 0;
 	}
-	&__title{
+	&__title,
+	&__title-back{
 		font-family: 'Proxima Nova Semibold', Arial, serif;
 		font-size: 30px;
 		line-height: 32px;
-		color: #000;
 		margin: 10px 0;
+		max-height: 32px*2;
+		overflow: hidden;
 	}
-	&__text{
+	&__title{
+		color: #000;
+	}
+	&__title-back{
+		color: #fff;
+	}
+	&__text,
+	&__text-back{
 		font-family: 'Proxima Nova Regular', Arial, serif;
 		font-size: 16px;
 		line-height: 24px;
+		overflow: hidden;
+		
+	}
+	&__text{
 		color: #000;
+		max-height: 24px*2;
+	}
+	&__text-back{
+		color: #fff;
+		max-height: 24px*15;
 	}
 	&__nav{
 		content: '';
@@ -837,6 +879,12 @@ header{
 		bottom: -10px;
 		transition: opacity .4s ease, width .2s ease, height .2s ease;
 		z-index: 10;
+	}
+	&__btn-back{
+		width: 200px;
+		line-height: 55px;
+		background: linear-gradient(to right, rgba(232, 75, 55, 1), rgba(238, 125, 22, 1));
+		margin: 20px auto;
 	}
 }
 @keyframes background {
@@ -865,6 +913,15 @@ header{
 	90% {background: linear-gradient(to left, rgba(211, 81, 112, 0.1), rgba(95, 1, 201, 0.1));}
 	100% {background: linear-gradient(to left, rgba(211, 81, 112, 0), rgba(95, 1, 201, 0));}
 }
+.portfolio__item:hover{
+	& .portfolio-box{
+		transform: rotateY(-180deg) translateZ(1px);
+	}
+	& .portfolio-box-back{
+		transform: rotateY(0deg);
+	}
+}
+
 // PORTFOLIO - end
 
 
@@ -1026,7 +1083,7 @@ header{
 .contact{
 	margin: 400px 0 50px;
 	text-align: center;
-	// z-index: 10;
+	z-index: 50;
 	&__text{
 		@include title();
 		line-height: 95px;
@@ -1387,7 +1444,90 @@ footer{
 	// height: auto;
 	// opacity: 1;
 }
-.open{
-	height: auto;
-	opacity: 1;
+// .open{
+// 	height: auto;
+// 	opacity: 1;
+// }
+
+
+// .product-button_right__arrow{
+// 	animation-name: box-shadow;
+// 	animation-duration: 1.2s;
+// 	animation-iteration-count: infinite;
+// 	animation-timing-function: ease-in-out;
+// }
+
+// @keyframes box-shadow {
+// 	from {
+// 		box-shadow: inset	0 0 0 17px rgba(165, 54, 137, .55),
+// 					inset	0 0 0 34px rgba(165, 54, 137, .1);
+		
+// 	}
+// 	to {
+// 		box-shadow: inset	0 0 0 10px rgba(165, 54, 137, .6),
+// 					inset	0 0 0 20px rgba(165, 54, 137, .5),
+// 					inset	0 0 0 30px rgba(165, 54, 137, .4),
+// 					inset	0 0 0 40px rgba(165, 54, 137, .3),
+// 					inset	0 0 0 50px rgba(165, 54, 137, .2),
+// 					inset	0 0 0 60px rgba(165, 54, 137, .1);
+// 	}
+// }
+
+.product-button-side:nth-child(1){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, transparent, #fff);
+	animation: animate-span1 1s linear infinite;
+	animation-delay: .5s;
+}
+@keyframes animate-span1{
+	0%{transform: translateX(-100%);}
+	100%{transform: translateX(100%);}
+}
+.product-button-side:nth-child(2){
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(to bottom, transparent, #fff);
+	animation: animate-span2 1s linear infinite;
+}
+@keyframes animate-span2{
+	0%{transform: translateY(-100%);}
+	100%{transform: translateY(100%);}
+}
+.product-button-side:nth-child(3){
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to left, transparent, #fff);
+	animation: animate-span3 1s linear infinite;
+	animation-delay: .5s;
+}
+@keyframes animate-span3{
+	0%{transform: translateX(100%);}
+	100%{transform: translateX(-100%);}
+}
+.product-button-side:nth-child(4){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(to top, transparent, #fff);
+	animation: animate-span4 1s linear infinite;
+}
+@keyframes animate-span4{
+	0%{transform: translateY(100%);}
+	100%{transform: translateY(-100%);}
+}
+.product-card_right .product-button-side:nth-child(4),
+.product-card_left .product-button-side:nth-child(2){
+	display: none;
 }
