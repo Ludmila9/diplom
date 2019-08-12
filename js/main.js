@@ -11,8 +11,10 @@
 		autoplaySpeed: 1000,
 		fade: true,
 		cssEase: 'linear',
-		speed: 500,
+		speed: 200,
 		arrows: true,
+		prevArrow: $('.slick-btn-prev'),
+        nextArrow: $('.slick-btn-next'),
 		// appendDots: '.hero__dots',
     });
 
@@ -88,26 +90,27 @@
 
 // circle on / out
 
-// // В консоль все выводится, но не срабатывает
+// В консоль все выводится, но не срабатывает
 // let item = document.querySelectorAll('.head-soc__item');	
-// let circle = document.getElementById('circle');
-// // let circle = item.children[0].children
+// let circle = document.querySelectorAll('circle');
+// let circle = item.children[0].children
 // let circleParent = circle.parentNode;
 // console.log(circleParent);
 // let circleLength = circle.getTotalLength();
 // console.log(circleLength);
-// for (var i = 0; i < item.length; i ++); {
-
-// 	if (item.type == 'mouseover') {
-// 		item[i].onmouseover = function(){
-// 			circle.classList.add('fill');
-// 		};
-// 	};
-// 	if (item.type == 'mouseover') {
-// 		item[i].onmouseout = function(){
-// 			circle.classList.remove('fill');
-// 		};
-// 	};
+// for (let i=0; i < item.length; i++) {
+	// console.log(item[i])
+	//if (item.type == 'mouseover') {
+		// item[i].onmouseover = function(){
+			
+		// 	this.children[0].children[0].classList.add('fill');
+		// };
+	//};
+	//if (item.type == 'mouseover') {
+		// item[i].onmouseout = function(){
+		// 	this.children[0].children[0].classList.remove('fill');
+		// };
+	//};
 // }; 
 
 // item.onmouseover = function(){	
@@ -188,3 +191,64 @@
 // 		circle.classList.remove('fill');
 // 	};
 // };
+
+
+let item = document.querySelectorAll('.head-soc__item');
+let itemFoot = document.querySelectorAll('.footer-soc__item');
+let circle = document.querySelector('.circle');
+let circleLength = circle.getTotalLength();
+console.log(circleLength);
+
+for (let i=0; i < item.length; i++) {
+	console.log(item[i])
+	item[i].onmouseover = function(){
+		this.children[0].children[0].classList.add('fill');
+	};
+	item[i].onmouseout = function(){
+		this.children[0].children[0].classList.remove('fill');
+	};
+};
+for (let i=0; i < itemFoot.length; i++) {
+	console.log(itemFoot[i])
+	itemFoot[i].onmouseover = function(){
+		this.children[0].children[0].classList.add('fill');
+	};
+	itemFoot[i].onmouseout = function(){
+		this.children[0].children[0].classList.remove('fill');
+	};
+};
+
+
+let btn = document.querySelectorAll('.slick-btn');	
+console.log(btn);
+let btnCircle = document.querySelector('.slick-circle');
+console.log(btnCircle);
+let btnCircleLength = btnCircle.getTotalLength();
+console.log(btnCircleLength);
+
+for (let i=0; i < btn.length; i++) {
+	console.log(btn[i])
+	btn[i].onmouseover = function(){
+		this.children[0].children[0].classList.add('fill');
+	};
+	btn[i].onmouseout = function(){
+		this.children[0].children[0].classList.remove('fill');
+	};
+}; 
+
+
+let card = document.querySelectorAll('.product-card');
+console.log(card);
+let productButton = document.querySelectorAll('.product-button');
+console.log(productButton);
+
+for (let i=0; i < card.length; i++) {
+	console.log(card[i])
+
+	productButton[i].onclick = function(){
+		card[i+1].style.display='flex';
+	};
+	// productButton[i].onclick = function(){
+	// 	card[i+1].classList.add('open');
+	// };
+};

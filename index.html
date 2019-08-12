@@ -38,57 +38,79 @@
 				<li class="nav-menu__item"><a href="#">Contact</a></li>
 			</ul>
 		</nav>
+
+
 		<div class="head-soc">
 			<ul class="head-soc-list">	
-				<li class="head-soc__item" id="head-soc__item">
+				<li class="head-soc__item" >
 					<svg class="icon-circle">
-						<circle id='circle' cx="30" cy="30" r="20" stroke-width="2" stroke-dashoffset='-124.85393524169922' stroke-dasharray="124.85393524169922 " fill="#ac378e"  stroke='red'/>
+						<circle class='circle' cx="30" cy="30" r="25"/>
 					</svg>
 					<a href="https://www.instagram.com" target="_blank">
 						<span class="visually-hidden">instagram</span>
 						<svg class="icon-social">
 							<use xlink:href="#icon-instagram-sprite"></use>
 						</svg>
+						<div class="circle-small">
+							<svg class="icon-circle-small" viewBox="0 0 220 220">
+								<circle cx="198" cy="100" r="18"/>
+							</svg>
+						</div>
 					</a>
 				</li>
-				<li class="head-soc__item" id="head-soc__item">
+				<li class="head-soc__item" >
 					<svg class="icon-circle">
-						<circle id='circle' cx="30" cy="30" r="20" stroke-width="2" stroke-dashoffset='-124.85393524169922' stroke-dasharray="124.85393524169922 " fill="#ac378e"  stroke='red'/>
+						<circle class='circle' cx="30" cy="30" r="25"/>
 					</svg>
 					<a href="https://www.facebook.com/" target="_blank">
 						<span class="visually-hidden">facebook</span>
 						<svg class="icon-social">
 							<use xlink:href="#icon-facebook-sprite"></use>
 						</svg>
+						<div class="circle-small">
+							<svg class="icon-circle-small" viewBox="0 0 220 220">
+								<circle cx="198" cy="100" r="18"/>
+							</svg>
+						</div>
 					</a>
 				</li>
-				<li class="head-soc__item" id="head-soc__item">
+				<li class="head-soc__item">
+					<svg class="icon-circle">
+						<circle class='circle' stroke-miterlimit="10" cx="30" cy="30" r="25"/>
+					</svg>
 					<a href="https://twitter.com" target="_blank">
 						<span class="visually-hidden">twitter</span>
 						<svg class="icon-social">
 							<use xlink:href="#icon-twitter-sprite"></use>
 						</svg>
-						<svg class="icon-circle">
-							<use xlink:href="#circle"></use>
-						</svg>
+						<div class="circle-small">
+							<svg class="icon-circle-small" viewBox="0 0 220 220">
+								<circle cx="198" cy="100" r="18"/>
+							</svg>
+						</div>
 					</a>
 				</li>
 			
-				<li class="head-soc__item" id="head-soc__item">
+				<li class="head-soc__item" >
+					<svg class="icon-circle">
+						<circle class='circle' cx="30" cy="30" r="25"/>
+					</svg>
 					<a href="https://www.behance.net" target="_blank">
 						<span class="visually-hidden">behance</span>
 						<svg class="icon-social">
 							<use xlink:href="#icon-behance-sprite"></use>
 						</svg>
-						<svg class="icon-circle">
-							<use xlink:href="#circle"></use>
-						</svg>
+						<div class="circle-small">
+							<svg class="icon-circle-small" viewBox="0 0 220 220">
+								<circle cx="198" cy="100" r="18"/>
+							</svg>
+						</div>
 					</a>
 				</li>
 			</ul>
 		</div>
 
-		</div>
+		
 		<button class="head-nav-btn" style="display: none;">
 			<span class="nav-btn__item"></span>
 			<span class="nav-btn__item"></span>
@@ -100,6 +122,7 @@
 <!-- <h1>Gradient text</h1> -->
 
 	<main>
+		
 		<section class="hero">
 			<div class="container">
 				<div class="hero-slider">
@@ -121,16 +144,36 @@
 					</div>
 				</div>
 			</div>
-			<!-- <button class="slick-prev">
+			<button class="slick-btn slick-btn-prev">
+				<svg class="slick-btn-circle">
+					<circle class='slick-circle' cx="52.5" cy="52.5" r="52"/>
+				</svg>
 				<svg class="icon-slick-prev">
 					<use xlink:href="#aerrow_left-sprite"></use>
 				</svg>
+				<div class="circle-big">
+					<svg class="icon-circle-big" viewBox="0 0 220 220">
+						<circle cx="198" cy="100" r="10"/>
+					</svg>
+				</div>
 			</button>
-			<button class="slick-next">
+
+			<button class="slick-btn slick-btn-next">
+				<svg class="slick-btn-circle">
+					<circle class='slick-circle' cx="52.5" cy="52.5" r="52"/>
+				</svg>
 				<svg class="icon-slick-next">
 					<use xlink:href="#aerrow_right-sprite"></use>
 				</svg>
-			</button> -->
+				<div class="circle-big">
+					<svg class="icon-circle-big" viewBox="0 0 220 220">
+						<circle cx="198" cy="100" r="10"/>
+					</svg>
+				</div>
+			</button>
+
+			
+
 			<!-- <div class="hero__dots">
 				<span></span>
 				<span></span>
@@ -155,7 +198,7 @@
 			<div class="container">
 				<div class="product-card product-card_left">
 					<div class="product-box__nav_left col-1">
-						<button class="product-button_left__arrow">
+						<button class="product-button product-button_left__arrow">
 							<svg class="icon-nav_left">
 								<use xlink:href="#aerrow_down-sprite"></use>
 							</svg>
@@ -189,7 +232,61 @@
 						<button class="btn product__btn">Learn more</button>
 					</div>
 					<div class="product-box__nav_right col-1">
-						<button class="product-button_right__arrow">
+						<button class="product-button product-button_right__arrow">
+							<svg class="icon-nav_right">
+								<use xlink:href="#aerrow_down-sprite"></use>
+							</svg>
+						</button>
+					</div>
+
+					<div class="product-box__img_right col-5">
+						<div class="product__img-bg_right">
+							<img src="img/product-card-bg-2.jpg" alt="man">
+							<div class="product__num_right">02 <span>/05</span></div>
+						</div>
+						<div class="product__img_right">
+							<img src="img/product-card-2.jpg" alt="product">
+						</div>
+					</div>
+				</div>
+
+				<div class="product-card product-card_left">
+					<div class="product-box__nav_left col-1">
+						<button class="product-button product-button_left__arrow">
+							<svg class="icon-nav_left">
+								<use xlink:href="#aerrow_down-sprite"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="product-box__img_left col-5">
+						<div class="product__img-bg_left">
+							<img src="img/product-card-bg-1.jpg" alt="man">
+						</div>
+						<div class="product__img_left">
+							<img src="img/product-card-1.jpg" alt="product">
+						</div>
+						<div class="product__num_left">01 <span>/05</span></div>
+					</div>
+					<div class="product-box__about_left col-6">
+						<div class="product__title">
+							<p>Strategy & Creative</p> 
+							<p>We design and build digital products, and services we believe in.</p>
+						</div>
+						<div class="product__text"><p>Strategy is not something you can retrospectively apply in order to make irrelevant ideas seem coherent strategists start out with a clear approach to ensure our creative proposal will match your business needs. </p></div>
+						<button class="btn product__btn">Learn more</button>
+					</div>
+				</div>
+
+				<div class="product-card product-card_right">
+					<div class="product-box__about_right col-6">
+						<div class="product__title">
+							<p>We are bunch of super-skilled guys and gals who love to create websites.</p>
+						</div>
+						<div class="product__text"><p>Filema Rodion proposes individual, airtight packages that keep the product's characteristics unchanged for treats for the marriage, baptism and every social event.</p> </div>
+						<button class="btn product__btn">Learn more</button>
+					</div>
+					<div class="product-box__nav_right col-1">
+						<button class="product-button product-button_right__arrow">
 							<svg class="icon-nav_right">
 								<use xlink:href="#aerrow_down-sprite"></use>
 							</svg>
@@ -354,9 +451,9 @@
 							<p class="expert-slider__text">We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.</p>
 						</div>
 					</div>
-					<div class="contact">
+					<!-- <div class="contact">
 						<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
-					</div>
+					</div> -->
 
 				</div>
 				
@@ -364,12 +461,12 @@
 
 		</section>
 
-		<<!-- section class="contact">
+		<section class="contact">
 			<div class="container">
 				<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
 
 			</div>
-		</section> -->
+		</section>
 	</main>
 
 	<footer>
@@ -394,47 +491,67 @@
 				<div class="footer-info-soc">
 					<ul class="footer-soc-list">	
 						<li class="footer-soc__item">
+							<svg class="icon-circle">
+								<circle class='circle' cx="30" cy="30" r="25"/>
+							</svg>
 							<a href="https://www.instagram.com" target="_blank">
 								<span class="visually-hidden">instagram</span>
 								<svg class="icon-social">
 									<use xlink:href="#icon-instagram-sprite"></use>
 								</svg>
-								<svg class="icon-circle">
-									<use xlink:href="#circle"></use>
-								</svg>
+								<div class="circle-small">
+									<svg class="icon-circle-small" viewBox="0 0 220 220">
+										<circle cx="198" cy="100" r="18"/>
+									</svg>
+								</div>
 							</a>
 						</li>
 						<li class="footer-soc__item">
+							<svg class="icon-circle">
+								<circle class='circle' cx="30" cy="30" r="25"/>
+							</svg>
 							<a href="https://www.facebook.com/" target="_blank">
 								<span class="visually-hidden">facebook</span>
 								<svg class="icon-social">
 									<use xlink:href="#icon-facebook-sprite"></use>
 								</svg>
-								<svg class="icon-circle">
-									<use xlink:href="#circle"></use>
-								</svg>
+								<div class="circle-small">
+									<svg class="icon-circle-small" viewBox="0 0 220 220">
+										<circle cx="198" cy="100" r="18"/>
+									</svg>
+								</div>
 							</a>
 						</li>
 						<li class="footer-soc__item">
+							<svg class="icon-circle">
+								<circle class='circle' stroke-miterlimit="10" cx="30" cy="30" r="25"/>
+							</svg>
 							<a href="https://twitter.com" target="_blank">
 								<span class="visually-hidden">twitter</span>
 								<svg class="icon-social">
 									<use xlink:href="#icon-twitter-sprite"></use>
 								</svg>
-								<svg class="icon-circle">
-									<use xlink:href="#circle"></use>
-								</svg>
+								<div class="circle-small">
+									<svg class="icon-circle-small" viewBox="0 0 220 220">
+										<circle cx="198" cy="100" r="18"/>
+									</svg>
+								</div>
 							</a>
 						</li>
 						<li class="footer-soc__item">
+							<svg class="icon-circle">
+								<circle class='circle' cx="30" cy="30" r="25"/>
+							</svg>
 							<a href="https://www.behance.net" target="_blank">
 								<span class="visually-hidden">behance</span>
 								<svg class="icon-social">
 									<use xlink:href="#icon-behance-sprite"></use>
 								</svg>
-								<svg class="icon-circle">
-									<use xlink:href="#circle"></use>
-								</svg>
+								<div class="circle-small">
+									<svg class="icon-circle-small" viewBox="0 0 220 220">
+										<circle cx="198" cy="100" r="18"/>
+									</svg>
+								</div>
 							</a>
 						</li>
 					</ul>
@@ -442,6 +559,8 @@
 			</div>
 			
 			
+					
+				
 		</section>
 	</footer>
 
@@ -491,30 +610,30 @@
 
 	<symbol id="expert-chat" viewBox="0 0 80 80">
 		<g>
-			<path class="icon-expert" d="M72.571,8.429c2.442,0,4.429,1.987,4.429,4.429v13.571c0,2.442-1.987,4.429-4.429,4.429h-1v1    l0,7.857l-6.343-8.457l-0.3-0.4h-0.5H42.714c-2.442,0-4.429-1.987-4.429-4.429V12.857c0-2.442,1.987-4.429,4.429-4.429H72.571     M72.571,7.429H42.714c-2.998,0-5.429,2.43-5.429,5.429v13.571c0,2.998,2.43,5.429,5.429,5.429h21.714l8.143,10.857l0-10.857h0    c2.998,0,5.429-2.43,5.429-5.429V12.857C78,9.859,75.57,7.429,72.571,7.429L72.571,7.429z"/>
-			<path class="icon-expert" d="M20,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S15.037,41,20,41 M20,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S25.523,40,20,40L20,40z"/>
-			<path class="icon-expert" d="M20,63c7.935,0,14.45,6.194,14.967,14H5.033C5.55,69.194,12.065,63,20,63 M20,62    c-8.837,0-16,7.163-16,16h32C36,69.163,28.837,62,20,62L20,62z"/>
-			<path class="icon-expert" d="M60,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S55.037,41,60,41 M60,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S65.523,40,60,40L60,40z"/>
-			<path class="icon-expert" d="M60,63c7.935,0,14.45,6.194,14.967,14H45.033C45.55,69.194,52.065,63,60,63 M60,62    c-8.837,0-16,7.163-16,16h32C76,69.163,68.837,62,60,62L60,62z"/>
-			<path class="icon-expert" d="M42,3c1.654,0,3,1.346,3,3v18c0,1.654-1.346,3-3,3H18h-0.481l-0.3,0.375L11,35.149V28v-1h-1H6    c-1.654,0-3-1.346-3-3V6c0-1.654,1.346-3,3-3H42 M42,2H6C3.791,2,2,3.791,2,6v18c0,2.209,1.791,4,4,4h4v10l8-10h24    c2.209,0,4-1.791,4-4V6C46,3.791,44.209,2,42,2L42,2z"/>
+			<path class="icon-expert" stroke="#fff" stroke-width="2" d="M72.571,8.429c2.442,0,4.429,1.987,4.429,4.429v13.571c0,2.442-1.987,4.429-4.429,4.429h-1v1    l0,7.857l-6.343-8.457l-0.3-0.4h-0.5H42.714c-2.442,0-4.429-1.987-4.429-4.429V12.857c0-2.442,1.987-4.429,4.429-4.429H72.571     M72.571,7.429H42.714c-2.998,0-5.429,2.43-5.429,5.429v13.571c0,2.998,2.43,5.429,5.429,5.429h21.714l8.143,10.857l0-10.857h0    c2.998,0,5.429-2.43,5.429-5.429V12.857C78,9.859,75.57,7.429,72.571,7.429L72.571,7.429z"/>
+			<path class="icon-expert" stroke="#fff" stroke-width="2" d="M20,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S15.037,41,20,41 M20,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S25.523,40,20,40L20,40z"/>
+			<path class="icon-expert" stroke="#fff" stroke-width="2" d="M20,63c7.935,0,14.45,6.194,14.967,14H5.033C5.55,69.194,12.065,63,20,63 M20,62    c-8.837,0-16,7.163-16,16h32C36,69.163,28.837,62,20,62L20,62z"/>
+			<path class="icon-expert" stroke="#fff" stroke-width="2" d="M60,41c4.963,0,9,4.037,9,9s-4.037,9-9,9s-9-4.037-9-9S55.037,41,60,41 M60,40   c-5.523,0-10,4.477-10,10s4.477,10,10,10s10-4.477,10-10S65.523,40,60,40L60,40z"/>
+			<path class="icon-expert" stroke="#fff" stroke-width="2" d="M60,63c7.935,0,14.45,6.194,14.967,14H45.033C45.55,69.194,52.065,63,60,63 M60,62    c-8.837,0-16,7.163-16,16h32C76,69.163,68.837,62,60,62L60,62z"/>
+			<path class="icon-expert" stroke="#fff" stroke-width="2" d="M42,3c1.654,0,3,1.346,3,3v18c0,1.654-1.346,3-3,3H18h-0.481l-0.3,0.375L11,35.149V28v-1h-1H6    c-1.654,0-3-1.346-3-3V6c0-1.654,1.346-3,3-3H42 M42,2H6C3.791,2,2,3.791,2,6v18c0,2.209,1.791,4,4,4h4v10l8-10h24    c2.209,0,4-1.791,4-4V6C46,3.791,44.209,2,42,2L42,2z"/>
 		</g>
 	</symbol>
 	<symbol id="aerrow_left-sprite" viewBox="0 0 120 30">
 		<g>
-			<line id="icon-slick-aerrow" class="icon-aerrow" x1="00" y1="18" x2="115" y2="18" />
-			<line id="icon-slick-aerrow" class="icon-aerrow" x1="00" y1="18" x2="54" y2="-18" />
+			<line class="icon-aerrow" x1="00" y1="18" x2="115" y2="18" />
+			<line class="icon-aerrow" x1="00" y1="18" x2="54" y2="-18" />
 		</g>
 	</symbol>
 	<symbol id="aerrow_right-sprite" viewBox="0 0 120 30">
 		<g>
-			<line id="icon-slick-aerrow" class="icon-aerrow" x1="00" y1="00" x2="115" y2="00" />
-			<line id="icon-slick-aerrow" class="icon-aerrow" x1="85" y1="18" x2="115" y2="0" />
+			<line class="icon-aerrow" x1="00" y1="00" x2="115" y2="00" />
+			<line class="icon-aerrow" x1="85" y1="18" x2="115" y2="0" />
 		</g>
 	</symbol>
 	<symbol id="aerrow_down-sprite" viewBox="0 0 30 115">
 		<g>
-			<line id="icon-aerrow" class="icon-aerrow" x1="00" y1="115" x2="00" y2="00" />
-			<line id="icon-aerrow" class="icon-aerrow" x1="00" y1="115" x2="30" y2="85" />
+			<line class="icon-aerrow" x1="00" y1="115" x2="00" y2="00" />
+			<line class="icon-aerrow" x1="00" y1="115" x2="30" y2="85" />
 		</g>
 	</symbol>
 	<!-- <symbol id="icon-circle" viewBox="0 0 125 125">

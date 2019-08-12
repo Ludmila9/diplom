@@ -65,14 +65,14 @@ $dark: #111619;
 .slick-next {
     position: absolute;
     display: block;
-    height: 105px;
-    width: 105px;
+    height: 20px;
+    width: 20px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
-    background: lighten($dark, 1%);
+    background: transparent;
     color: transparent;
-    top: 37%;
+    top: 50%;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
@@ -81,15 +81,11 @@ $dark: #111619;
     outline: none;
     border: 1px solid #111;
     border-radius: 50%;
-    z-index: 10;
-    -webkit-transition: background .5s ease;
-       -moz-transition: background .5s ease;
-        -ms-transition: background .5s ease;
-         -o-transition: background .5s ease;
-            transition: background .5s ease;
+    height: 20px;
+    width: 20px;
     &:hover, &:focus {
         outline: none;
-        background: lighten($dark, 4%);
+        background: transparent;
         color: transparent;
         &:before {
             opacity: $slick-opacity-on-hover;
