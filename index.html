@@ -32,10 +32,10 @@
 			
 		<nav class="head-nav">
 			<ul class="nav-menu">
-				<li class="nav-menu__item"><a href="#">About</a></li>
-				<li class="nav-menu__item"><a href="#">projects</a></li>
-				<li class="nav-menu__item"><a href="#">Blog</a></li>
-				<li class="nav-menu__item"><a href="#">Contact</a></li>
+				<li class="nav-menu__item"><a href="#About">About</a></li>
+				<li class="nav-menu__item"><a href="#projects">projects</a></li>
+				<li class="nav-menu__item"><a href="#Blog">Blog</a></li>
+				<li class="nav-menu__item"><a href="#Contact">Contact</a></li>
 			</ul>
 		</nav>
 
@@ -182,7 +182,7 @@
 			</div> -->
 		</section>
 
-		<section class="about">
+		<section class="about" id="About">
 			<div class="container">
 				<button class="about__btn">
 					<svg class="icon-btn-play">
@@ -194,19 +194,21 @@
 			</div>
 		</section>
 		
-		<section class="product">
+		<section class="product" id="projects">
 			<div class="container">
-				<div class="product-card product-card_left">
+				<div class="product-card product-card_left" id="product-card-1">
 					<div class="product-box__nav_left col-1">
-						<button class="product-button product-button_left__arrow">
+						<div class="product-button product-button_left__arrow">
 							<span class="product-button-side"></span>
 							<span class="product-button-side"></span>
 							<span class="product-button-side"></span>
 							<span class="product-button-side"></span>
-							<svg class="icon-nav_left">
-								<use xlink:href="#aerrow_down-sprite"></use>
-							</svg>
-						</button>
+							<!-- <a href="#product-card-2" class="product__link"> -->
+								<svg class="icon-nav_left">
+									<use xlink:href="#aerrow_down-sprite"></use>
+								</svg>
+							<!-- </a> -->
+						</div>
 					</div>
 					<div class="product-box__img_left col-5">
 						<div class="product__img-bg_left">
@@ -227,7 +229,7 @@
 					</div>
 				</div>
 
-				<div class="product-card product-card_right">
+				<div class="product-card product-card_right" id="product-card-2">
 					<div class="product-box__about_right col-6">
 						<div class="product__title">
 							<p>We are bunch of super-skilled guys and gals who love to create websites.</p>
@@ -258,7 +260,7 @@
 					</div>
 				</div>
 
-				<div class="product-card product-card_left">
+				<div class="product-card product-card_left" id="product-card-3">
 					<div class="product-box__nav_left col-1">
 						<button class="product-button product-button_left__arrow">
 							<span class="product-button-side"></span>
@@ -289,7 +291,7 @@
 					</div>
 				</div>
 
-				<div class="product-card product-card_right">
+				<div class="product-card product-card_right" id="product-card-4">
 					<div class="product-box__about_right col-6">
 						<div class="product__title">
 							<p>We are bunch of super-skilled guys and gals who love to create websites.</p>
@@ -320,17 +322,17 @@
 					</div>
 				</div>
 
-				<div class="product-card product-card_left">
+				<div class="product-card product-card_left" id="product-card-5">
 					<div class="product-box__nav_left col-1">
-						<button class="product-button product-button_left__arrow">
+						<a href="#product-card-1" class="product-button product-button_left__arrow">
 							<span class="product-button-side"></span>
 							<span class="product-button-side"></span>
 							<span class="product-button-side"></span>
 							<span class="product-button-side"></span>
 							<svg class="icon-nav_left">
-								<use xlink:href="#aerrow_down-sprite"></use>
+								<use xlink:href="#aerrow_up-sprite"></use>
 							</svg>
-						</button>
+						</a>
 					</div>
 					<div class="product-box__img_left col-5">
 						<div class="product__img-bg_left">
@@ -353,12 +355,12 @@
 			</div>
 		</section>
 
-		<section class="portfolio">
+		<section class="portfolio" id="Blog">
 			<div class="container">
 				<div class="portfolio-wrapper">
 					<h3 class="title-small portfolio__title-small">Selected Projects</h3>
 					<div class="portfolio-list">
-						<div class="portfolio__item" onMouseOut="itemGradient()">
+						<div class="portfolio__item">
 							<div class="portfolio-box">
 								<div class="portfolio__img"><img src="img/portfolio-1.jpg" alt=""></div>
 								<div class="portfolio-about">
@@ -483,7 +485,7 @@
 			</div>
 		</section>
 
-		<section class="expert">
+		<section class="expert" id="Contact">
 			<div class="container">
 				<div class="expert-wrap">
 					<h3 class="title-small expert__title-small">services we specialize in</h3>
@@ -634,10 +636,6 @@
 					</ul>
 				</div>
 			</div>
-			
-			
-					
-				
 		</section>
 	</footer>
 
@@ -713,12 +711,18 @@
 			<line class="icon-aerrow" x1="00" y1="115" x2="30" y2="85" />
 		</g>
 	</symbol>
+	<symbol id="aerrow_up-sprite" viewBox="0 0 30 115">
+		<g>
+			<line class="icon-aerrow" x1="00" y1="115" x2="00" y2="00" />
+			<line class="icon-aerrow" x1="00" y1="00" x2="30" y2="35" />
+		</g>
+	</symbol>
 	<!-- <symbol id="icon-circle" viewBox="0 0 125 125">
 		<circle id='circle' cx="30" cy="30" r="20" stroke-width="2" stroke-dashoffset='-124.85393524169922' stroke-dasharray="124.85393524169922 " fill="none"  stroke='#ac378e'/>
 	</symbol> -->
 </svg>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src='js/slick.min.js'></script>

@@ -81,7 +81,13 @@
 	// }
 
 	
-	
+	var $page = $('html, body');
+	$('a[href*="#"]').click(function() {
+		$page.animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 1800);
+		return false;
+	});
 
 })(jQuery); 
 
@@ -238,17 +244,65 @@ for (let i=0; i < btn.length; i++) {
 
 
 let card = document.querySelectorAll('.product-card');
-console.log(card);
+// let cardHeight = card.height();
+// console.log(card);
+// console.log(cardHeight);
 let productButton = document.querySelectorAll('.product-button');
-console.log(productButton);
+// console.log(productButton);
+let cardUp = document.querySelector('#product-card-5 a');
+console.log(cardUp);
 
 for (let i=0; i < card.length; i++) {
-	console.log(card[i])
-
+	// console.log(card[i]);
+	let cardHeight = card[0].scrollHeight;
+	// console.log(cardHeight);
 	productButton[i].onclick = function(){
+
 		card[i+1].style.display='flex';
+		window.scrollBy({ top: cardHeight, behavior: 'smooth' });
 	};
+	// var height = $(window).height();
+	// $(window).scrollTop(height);
 	// productButton[i].onclick = function(){
 	// 	card[i+1].classList.add('open');
 	// };
+
+	cardUp.onclick = function(){
+		card[1].style.display='none';
+		card[2].style.display='none';
+		card[3].style.display='none';
+		card[4].style.display='none';
+		console.log(card[i]);
+	};
 };
+
+
+let box = document.querySelectorAll('.portfolio-box');
+// console.log(box);
+let boxBack = document.querySelectorAll('.portfolio-box-back');
+// console.log(boxBack);
+let portfolioButton = document.querySelectorAll('.portfolio__nav');
+// console.log(portfolioButton);
+let portfolioButtonBack = document.querySelectorAll('.portfolio__btn-back');
+// console.log(portfolioButtonBack);
+
+
+portfolioButton.onclick = function(){
+	box.classList.add('rotate');
+	boxBack.classList.add('rotate-back');
+
+}
+for (let i=0; i < box.length; i++) {
+	console.log(box[i])
+	portfolioButton.onclick = function(){
+		box.classList.add('rotate');
+	};
+};
+for (let i=0; i < boxBack.length; i++) {
+	console.log(boxBack[i])
+	portfolioButton.onclick = function(){
+		box.classList.add('rotate-back');
+	};
+};
+
+

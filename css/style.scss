@@ -431,7 +431,7 @@ header{
 		outline: none;
 		border: 2px solid #6c2552;
 		animation-name: box-shadow;
-		animation-duration: 1.2s;
+		animation-duration: 2.7s;
 		animation-iteration-count: infinite;
 		animation-timing-function: ease-in-out;
 		margin: 100px 0;
@@ -507,7 +507,15 @@ header{
 		padding: 250px 0 10px;
 		position: relative;
 		margin-bottom: 70px;
-		
+		&:last-of-type svg{
+			top: 35px;
+			left: 35px;
+		}
+	}
+	&__link{
+		width: 100%;
+		height: 100%;
+		display: inline-block;
 	}
 	&-button_left__arrow,
 	&-button_right__arrow{
@@ -753,31 +761,7 @@ header{
 			opacity: 1;
 			right: 15px;
 		}
-		// &:before{
-		// 	content: '';
-		// 	width: 520px;
-		// 	height: 675px;
-		// 	display: inline-block;
-		// 	animation-name: background-before;
-		// 	animation-duration: .6s;
-		// 	animation-iteration-count: 1;
-		// 	animation-timing-function:  -out;
-		// 	animation-fill-mode: forwards;
-		// 	animation-direction: normal;
-		// 	position: absolute;
-		// }
 	}
-	// &__item-background-before{
-	// 	width: 520px;
-	// 	height: 675px;
-	// 	display: inline-block;
-	// 	animation-name: background-before;
-	// 	animation-duration: 1.6s;
-	// 	animation-iteration-count: 1;
-	// 	animation-timing-function:  -out;
-	// 	animation-fill-mode: forwards;
-	// 	animation-direction: normal;
-	// }
 	&-box{
 		width: 485px;
 		height: 635px;
@@ -913,13 +897,21 @@ header{
 	90% {background: linear-gradient(to left, rgba(211, 81, 112, 0.1), rgba(95, 1, 201, 0.1));}
 	100% {background: linear-gradient(to left, rgba(211, 81, 112, 0), rgba(95, 1, 201, 0));}
 }
-.portfolio__item:hover{
-	& .portfolio-box{
-		transform: rotateY(-180deg) translateZ(1px);
-	}
-	& .portfolio-box-back{
-		transform: rotateY(0deg);
-	}
+
+// .portfolio__item:hover{
+// 	& .portfolio-box{
+// 		transform: rotateY(-180deg) translateZ(1px);
+// 	}
+// 	& .portfolio-box-back{
+// 		transform: rotateY(0deg);
+// 	}
+// }
+
+.portfolio-box.rotate{
+	transform: rotateY(-180deg) translateZ(1px);
+}
+.portfolio-box-back.rotate-back{
+	transform: rotateY(0deg);
 }
 
 // PORTFOLIO - end
