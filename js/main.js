@@ -268,11 +268,13 @@ for (let i=0; i < card.length; i++) {
 	// };
 
 	cardUp.onclick = function(){
+
 		card[1].style.display='none';
 		card[2].style.display='none';
 		card[3].style.display='none';
 		card[4].style.display='none';
 		console.log(card[i]);
+		
 	};
 };
 
@@ -287,20 +289,20 @@ let portfolioButtonBack = document.querySelectorAll('.portfolio__btn-back');
 // console.log(portfolioButtonBack);
 
 
-portfolioButton.onclick = function(){
-	box.classList.add('rotate');
-	boxBack.classList.add('rotate-back');
+// portfolioButton.onclick = function(){
+// 	box.classList.add('rotate');
+// 	boxBack.classList.add('rotate-back');
 
-}
-for (let i=0; i < box.length; i++) {
-	console.log(box[i])
-	portfolioButton.onclick = function(){
-		box.classList.add('rotate');
-	};
-};
-for (let i=0; i < boxBack.length; i++) {
-	console.log(boxBack[i])
-	portfolioButton.onclick = function(){
-		box.classList.add('rotate-back');
-	};
-};
+// }
+// for (let i=0; i < box.length; i++) {
+// 	console.log(box[i])
+// 	portfolioButton.onclick = function(){
+// 		box.classList.add('rotate');
+// 	};
+// };
+// for (let i=0; i < boxBack.length; i++) {
+// 	console.log(boxBack[i])
+// 	portfolioButton.onclick = function(){
+// 		box.classList.add('rotate-back');
+// 	};
+// };

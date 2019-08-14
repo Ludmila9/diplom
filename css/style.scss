@@ -898,14 +898,14 @@ header{
 	100% {background: linear-gradient(to left, rgba(211, 81, 112, 0), rgba(95, 1, 201, 0));}
 }
 
-// .portfolio__item:hover{
-// 	& .portfolio-box{
-// 		transform: rotateY(-180deg) translateZ(1px);
-// 	}
-// 	& .portfolio-box-back{
-// 		transform: rotateY(0deg);
-// 	}
-// }
+.portfolio__item:hover{
+	& .portfolio-box{
+		transform: rotateY(-180deg) translateZ(1px);
+	}
+	& .portfolio-box-back{
+		transform: rotateY(0deg);
+	}
+}
 
 .portfolio-box.rotate{
 	transform: rotateY(-180deg) translateZ(1px);
