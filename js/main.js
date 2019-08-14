@@ -304,5 +304,3 @@ for (let i=0; i < boxBack.length; i++) {
 		box.classList.add('rotate-back');
 	};
 };
-
-
