@@ -24,7 +24,7 @@
 		dots: true,
 		arrows: false,
 		infinity: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 1000,
 		cssEase: 'ease-out',
 		speed: 1500,
