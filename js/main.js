@@ -28,6 +28,33 @@
 		autoplaySpeed: 1000,
 		cssEase: 'ease-out',
 		speed: 1500,
+		responsive: [
+		    {
+		      breakpoint: 1300,
+		      settings: {
+		        slidesToShow: 2,
+		        // slidesToScroll: 1,
+		        // infinite: true,
+		        // 
+		      }
+		    },
+		    {
+		      breakpoint: 990,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1,
+		        dots: false,
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        dots: false,
+		      }
+		    }
+		  ]
         // appendDots: '.hero-slider__check',
     });
 
@@ -89,6 +116,26 @@
 		return false;
 	});
 
+
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > $(this).height()) {
+			$('.top').addClass('active');
+		} else {
+			$('.top').removeClass('active');
+		}
+	});
+	$('.top').click(function() {
+		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	});
+
+
+	$(window).on('load', function() {
+		$('.preloader').delay(1).fadeOut('slow');
+	});
+
+
+	
 })(jQuery); 
 
 
@@ -259,7 +306,9 @@ for (let i=0; i < card.length; i++) {
 	productButton[i].onclick = function(){
 
 		card[i+1].style.display='flex';
-		window.scrollBy({ top: cardHeight, behavior: 'smooth' });
+		// window.scrollBy({ top: cardHeight, behavior: 'smooth' });
+		// немного уменьшает размер прокрутки
+		window.scrollBy({ top: cardHeight + 50, behavior: 'smooth' }); 
 	};
 	// var height = $(window).height();
 	// $(window).scrollTop(height);
@@ -269,7 +318,7 @@ for (let i=0; i < card.length; i++) {
 
 	cardUp.onclick = function(){
 
-		card[1].style.display='none';
+		// card[1].style.display='none';
 		card[2].style.display='none';
 		card[3].style.display='none';
 		card[4].style.display='none';

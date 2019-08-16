@@ -17,9 +17,19 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- <link rel="stylesheet" href="fonts/FontAwesome/css/font-awesome.min.css"> -->
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#111619">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#111619">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#111619">
+
 </head>
 <body>
-	<header class="head">
+	<!-- <div class="preloader"><div class="pulse"></div></div> -->
+
+	<header class="head" id="home">
 		<div class="head-info">
 			<div class="logo"><a href="#" class="ba-logo"><img src="img/logo.png" alt="logo"></a></div>
 			<div class="head-phone">
@@ -110,13 +120,7 @@
 			</ul>
 		</div>
 
-		
-		<button class="head-nav-btn" style="display: none;">
-			<span class="nav-btn__item"></span>
-			<span class="nav-btn__item"></span>
-			<span class="nav-btn__item"></span>
-		</button>
-		
+
 	</header>
 
 <!-- <h1>Gradient text</h1> -->
@@ -125,54 +129,61 @@
 		
 		<section class="hero">
 			<div class="container">
-				<div class="hero-slider">
-					<div class="hero-slider-box">
+				<div class="hero-wrap">
+					<div class="hero__img">
 						<img src="img/10x.png" alt="title">
-						<h1 class="hero__title">your presence</h1>
+						<h1 class="hero__img-title">Your search ends here</h1>
 					</div>
-					<div class="hero-slider-box">
-						<img src="img/10x.png" alt="title">
-						<h1 class="hero__title">your *** presence</h1>
+					
+					<div class="hero-slider">
+						<div class="hero-slider-box">
+							<img src="img/10x.png" alt="title">
+							<h1 class="hero__title">Your search ends here.</h1>
+						</div>
+						<div class="hero-slider-box">
+							<img src="img/10x.png" alt="title">
+							<h1 class="hero__title">your *** presence</h1>
+						</div>
+						<div class="hero-slider-box">
+							<img src="img/10x.png" alt="title">
+							<h1 class="hero__title">your %%% presence</h1>
+						</div>
+						<div class="hero-slider-box">
+							<img src="img/10x.png" alt="title">
+							<h1 class="hero__title">your @@@ presence</h1>
+						</div>
 					</div>
-					<div class="hero-slider-box">
-						<img src="img/10x.png" alt="title">
-						<h1 class="hero__title">your %%% presence</h1>
+					<div class="hero-btn-wrap">
+						<button class="slick-btn slick-btn-prev">
+							<svg class="slick-btn-circle">
+								<circle class='slick-circle' cx="52.5" cy="52.5" r="52"/>
+							</svg>
+							<svg class="icon-slick-prev">
+								<use xlink:href="#aerrow_left-sprite"></use>
+							</svg>
+							<div class="circle-big">
+								<svg class="icon-circle-big" viewBox="0 0 220 220">
+									<circle cx="198" cy="100" r="10"/>
+								</svg>
+							</div>
+						</button>
+						<button class="slick-btn slick-btn-next">
+							<svg class="slick-btn-circle">
+								<circle class='slick-circle' cx="52.5" cy="52.5" r="52"/>
+							</svg>
+							<svg class="icon-slick-next">
+								<use xlink:href="#aerrow_right-sprite"></use>
+							</svg>
+							<div class="circle-big">
+								<svg class="icon-circle-big" viewBox="0 0 220 220">
+									<circle cx="198" cy="100" r="10"/>
+								</svg>
+							</div>
+						</button>
 					</div>
-					<div class="hero-slider-box">
-						<img src="img/10x.png" alt="title">
-						<h1 class="hero__title">your @@@ presence</h1>
-					</div>
+						
 				</div>
 			</div>
-			<button class="slick-btn slick-btn-prev">
-				<svg class="slick-btn-circle">
-					<circle class='slick-circle' cx="52.5" cy="52.5" r="52"/>
-				</svg>
-				<svg class="icon-slick-prev">
-					<use xlink:href="#aerrow_left-sprite"></use>
-				</svg>
-				<div class="circle-big">
-					<svg class="icon-circle-big" viewBox="0 0 220 220">
-						<circle cx="198" cy="100" r="10"/>
-					</svg>
-				</div>
-			</button>
-
-			<button class="slick-btn slick-btn-next">
-				<svg class="slick-btn-circle">
-					<circle class='slick-circle' cx="52.5" cy="52.5" r="52"/>
-				</svg>
-				<svg class="icon-slick-next">
-					<use xlink:href="#aerrow_right-sprite"></use>
-				</svg>
-				<div class="circle-big">
-					<svg class="icon-circle-big" viewBox="0 0 220 220">
-						<circle cx="198" cy="100" r="10"/>
-					</svg>
-				</div>
-			</button>
-
-			
 
 			<!-- <div class="hero__dots">
 				<span></span>
@@ -185,11 +196,14 @@
 		<section class="about" id="About">
 			<div class="container">
 				<button class="about__btn">
+					<svg class="slick-btn-circle">
+						<circle class='slick-circle' cx="62" cy="62" r="60">
+					</svg>
 					<svg class="icon-btn-play">
 						<use xlink:href="#btn-play-sprite"></use>
 					</svg>
 				</button>
-				<h2 class="title about__title">We're a designer & a developer who love building cool stuff with our clients.</h2>
+				<h2 class=" about__title">We're a designer & a developer who love building cool stuff with our clients.</h2>
 				<img class="about__img" src="img/signature.png" alt="signature">
 			</div>
 		</section>
@@ -197,20 +211,20 @@
 		<section class="product" id="projects">
 			<div class="container">
 				<div class="product-card product-card_left" id="product-card-1">
-					<div class="product-box__nav_left col-1">
-						<div class="product-button product-button_left__arrow">
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<!-- <a href="#product-card-2" class="product__link"> -->
-								<svg class="icon-nav_left">
-									<use xlink:href="#aerrow_down-sprite"></use>
-								</svg>
-							<!-- </a> -->
+					<div class="product-box__img_left">
+						<div class="product-box__nav_left">
+							<div class="product-button product-button_left__arrow">
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<!-- <a href="#product-card-2" class="product__link"> -->
+									<svg class="icon-nav_left">
+										<use xlink:href="#aerrow_down-sprite"></use>
+									</svg>
+								<!-- </a> -->
+							</div>
 						</div>
-					</div>
-					<div class="product-box__img_left col-5">
 						<div class="product__img-bg_left">
 							<img src="img/product-card-bg-1.jpg" alt="man">
 						</div>
@@ -219,7 +233,7 @@
 						</div>
 						<div class="product__num_left">01 <span>/05</span></div>
 					</div>
-					<div class="product-box__about_left col-6">
+					<div class="product-box__about_left">
 						<div class="product__title">
 							<p>Strategy & Creative</p> 
 							<p>We design and build digital products, and services we believe in.</p>
@@ -228,51 +242,51 @@
 						<button class="btn product__btn">Learn more</button>
 					</div>
 				</div>
-
+					<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/05J4krj98Z4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							 -->		
 				<div class="product-card product-card_right" id="product-card-2">
-					<div class="product-box__about_right col-6">
+					<div class="product-box__about_right">
 						<div class="product__title">
 							<p>We are bunch of super-skilled guys and gals who love to create websites.</p>
 						</div>
 						<div class="product__text"><p>Filema Rodion proposes individual, airtight packages that keep the product's characteristics unchanged for treats for the marriage, baptism and every social event.</p> </div>
 						<button class="btn product__btn">Learn more</button>
 					</div>
-					<div class="product-box__nav_right col-1">
-						<button class="product-button product-button_right__arrow">
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<svg class="icon-nav_right">
-								<use xlink:href="#aerrow_down-sprite"></use>
-							</svg>
-						</button>
-					</div>
-
-					<div class="product-box__img_right col-5">
+					<div class="product-box__img_right">
+						<div class="product-box__nav_right">
+							<button class="product-button product-button_right__arrow">
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<svg class="icon-nav_right">
+									<use xlink:href="#aerrow_down-sprite"></use>
+								</svg>
+							</button>
+						</div>
 						<div class="product__img-bg_right">
 							<img src="img/product-card-bg-2.jpg" alt="man">
-							<div class="product__num_right">02 <span>/05</span></div>
 						</div>
 						<div class="product__img_right">
 							<img src="img/product-card-2.jpg" alt="product">
 						</div>
+						<div class="product__num_right">02 <span>/05</span></div>
 					</div>
 				</div>
 
 				<div class="product-card product-card_left" id="product-card-3">
-					<div class="product-box__nav_left col-1">
-						<button class="product-button product-button_left__arrow">
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<svg class="icon-nav_left">
-								<use xlink:href="#aerrow_down-sprite"></use>
-							</svg>
-						</button>
-					</div>
-					<div class="product-box__img_left col-5">
+					<div class="product-box__img_left">
+						<div class="product-box__nav_left">
+							<button class="product-button product-button_left__arrow">
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<svg class="icon-nav_left">
+									<use xlink:href="#aerrow_down-sprite"></use>
+								</svg>
+							</button>
+						</div>
 						<div class="product__img-bg_left">
 							<img src="img/product-card-bg-3.jpg" alt="man">
 						</div>
@@ -281,7 +295,7 @@
 						</div>
 						<div class="product__num_left">03 <span>/05</span></div>
 					</div>
-					<div class="product-box__about_left col-6">
+					<div class="product-box__about_left">
 						<div class="product__title">
 							<p>Strategy & Creative</p> 
 							<p>We design and build digital products, and services we believe in.</p>
@@ -292,58 +306,57 @@
 				</div>
 
 				<div class="product-card product-card_right" id="product-card-4">
-					<div class="product-box__about_right col-6">
+					<div class="product-box__about_right">
 						<div class="product__title">
 							<p>We are bunch of super-skilled guys and gals who love to create websites.</p>
 						</div>
 						<div class="product__text"><p>Filema Rodion proposes individual, airtight packages that keep the product's characteristics unchanged for treats for the marriage, baptism and every social event.</p> </div>
 						<button class="btn product__btn">Learn more</button>
 					</div>
-					<div class="product-box__nav_right col-1">
-						<button class="product-button product-button_right__arrow">
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<svg class="icon-nav_right">
-								<use xlink:href="#aerrow_down-sprite"></use>
-							</svg>
-						</button>
-					</div>
-
-					<div class="product-box__img_right col-5">
+					<div class="product-box__img_right">
+						<div class="product-box__nav_right">
+							<button class="product-button product-button_right__arrow">
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<svg class="icon-nav_right">
+									<use xlink:href="#aerrow_down-sprite"></use>
+								</svg>
+							</button>
+						</div>
 						<div class="product__img-bg_right">
 							<img src="img/product-card-bg-4.jpg" alt="man">
-							<div class="product__num_right">04 <span>/05</span></div>
 						</div>
 						<div class="product__img_right">
 							<img src="img/product-card-4.jpg" alt="product">
 						</div>
+						<div class="product__num_right">04 <span>/05</span></div>
 					</div>
 				</div>
 
 				<div class="product-card product-card_left" id="product-card-5">
-					<div class="product-box__nav_left col-1">
-						<a href="#product-card-1" class="product-button product-button_left__arrow">
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<span class="product-button-side"></span>
-							<svg class="icon-nav_left">
-								<use xlink:href="#aerrow_up-sprite"></use>
-							</svg>
-						</a>
-					</div>
-					<div class="product-box__img_left col-5">
+					<div class="product-box__img_left">
+						<div class="product-box__nav_left">
+							<a href="#product-card-1" class="product-button product-button_left__arrow">
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<span class="product-button-side"></span>
+								<svg class="icon-nav_left">
+									<use xlink:href="#aerrow_up-sprite"></use>
+								</svg>
+							</a>
+						</div>
 						<div class="product__img-bg_left">
-							<img src="img/product-card-bg-1.jpg" alt="man">
+							<img src="img/product-card-bg-5.jpg" alt="man">
 						</div>
 						<div class="product__img_left">
-							<img src="img/product-card-1.jpg" alt="product">
+							<img src="img/product-card-5.jpg" alt="product">
 						</div>
 						<div class="product__num_left">05 <span>/05</span></div>
 					</div>
-					<div class="product-box__about_left col-6">
+					<div class="product-box__about_left">
 						<div class="product__title">
 							<p>Strategy & Creative</p> 
 							<p>We design and build digital products, and services we believe in.</p>
@@ -367,18 +380,18 @@
 									<div class="portfolio__title">End of Thino</div>
 									<div class="portfolio__text">When the switch is on, it cuts off the data transmission between the charging device and the source</div>
 								</div>
-								<button class="portfolio__nav">
+								<!-- <button class="portfolio__nav">
 									<svg class="icon-more">
 										<use xlink:href="#aerrow_right-sprite"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
 							<div class="portfolio-box-back">
 								<div class="portfolio__title-back">End of Thino</div>
 								<div class="portfolio__text-back">When the switch is on, it cuts off the data transmission between the charging device and the source. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi.</div>
-								<div class="btn portfolio__btn-back">Back</div>
+								<div class="btn portfolio__btn-back"><a href="#about">contact us</a></div>
 							</div>
-							<div class="btn portfolio__btn">Shop Now</div>
+							<div class="btn portfolio__btn">show now</div>
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio-box">
@@ -387,18 +400,18 @@
 									<div class="portfolio__title">Het Boerenveensche</div>
 									<div class="portfolio__text">Thino has a physical switch that activates its turbo-charging feature</div>
 								</div>
-								<button class="portfolio__nav">
+								<!-- <button class="portfolio__nav">
 									<svg class="icon-more">
 										<use xlink:href="#aerrow_right-sprite"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
 							<div class="portfolio-box-back">
 								<div class="portfolio__title-back">Het Boerenveensche</div>
 								<div class="portfolio__text-back">Thino has a physical switch that activates its turbo-charging feature. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero accusantium laboriosam voluptates architecto numquam culpa, ipsum perferendis unde blanditiis iure!</div>
-								<div class="btn portfolio__btn-back">Back</div>
+								<div class="btn portfolio__btn-back"><a href="#contact">contact us</a></div>
 							</div>
-							<div class="btn portfolio__btn">Shop Now</div>
+							<div class="btn portfolio__btn">show now</div>
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio-box">
@@ -407,18 +420,18 @@
 									<div class="portfolio__title">Bluerocket</div>
 									<div class="portfolio__text">The World's FIrst VR & AR Phone Case</div>
 								</div>
-								<button class="portfolio__nav">
+								<!-- <button class="portfolio__nav">
 									<svg class="icon-more">
 										<use xlink:href="#aerrow_right-sprite"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
 							<div class="portfolio-box-back">
 								<div class="portfolio__title-back">Bluerocket</div>
 								<div class="portfolio__text-back">The World's FIrst VR & AR Phone Case. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, cumque?</div>
-								<div class="btn portfolio__btn-back">Back</div>
+								<div class="btn portfolio__btn-back"><a href="#about">contact us</a></div>
 							</div>
-							<div class="btn portfolio__btn">Shop Now</div>
+							<div class="btn portfolio__btn">show now</div>
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio-box">
@@ -427,18 +440,18 @@
 									<div class="portfolio__title">Harmony / Poliform</div>
 									<div class="portfolio__text">This chair joins chaos and order in a symbiotic relationship, full of expression and rhythm</div>
 								</div>
-								<button class="portfolio__nav">
+								<!-- <button class="portfolio__nav">
 									<svg class="icon-more">
 										<use xlink:href="#aerrow_right-sprite"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
 							<div class="portfolio-box-back">
 								<div class="portfolio__title-back">Harmony / Poliform</div>
 								<div class="portfolio__text-back">This chair joins chaos and order in a symbiotic relationship, full of expression and rhythm. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error culpa magnam pariatur dolorum, sit deserunt quam, officia a! Sed repellat quas architecto neque vel deleniti odio laudantium ut ratione maxime.</div>
-								<div class="btn portfolio__btn-back">Back</div>
+								<div class="btn portfolio__btn-back"><a href="#about">contact us</a></div>
 							</div>
-							<div class="btn portfolio__btn">Shop Now</div>
+							<div class="btn portfolio__btn">show now</div>
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio-box">
@@ -447,18 +460,18 @@
 									<div class="portfolio__title">Rowenta Studiodry</div>
 									<div class="portfolio__text">Rowenta Studiodry 2nd Generation in 2012</div>
 								</div>
-								<button class="portfolio__nav">
+								<!-- <button class="portfolio__nav">
 									<svg class="icon-more">
 										<use xlink:href="#aerrow_right-sprite"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
 							<div class="portfolio-box-back">
 								<div class="portfolio__title-back">Rowenta Studiodry</div>
 								<div class="portfolio__text-back">Rowenta Studiodry 2nd Generation in 2012. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ex doloribus sapiente perferendis, laboriosam corrupti soluta nesciunt repellat tempora asperiores.</div>
-								<div class="btn portfolio__btn-back">Back</div>
+								<div class="btn portfolio__btn-back"><a href="#about">contact us</a></div>
 							</div>
-							<div class="btn portfolio__btn">Shop Now</div>
+							<div class="btn portfolio__btn">show now</div>
 						</div>
 						<div class="portfolio__item">
 							<div class="portfolio-box">
@@ -467,25 +480,25 @@
 									<div class="portfolio__title">Fritsch Durisotti</div>
 									<div class="portfolio__text">Spline Spline is a new way of producing wicker furniture that dramatically</div>
 								</div>
-								<button class="portfolio__nav">
+								<!-- <button class="portfolio__nav">
 									<svg class="icon-more">
 										<use xlink:href="#aerrow_right-sprite"></use>
 									</svg>
-								</button>
+								</button> -->
 							</div>
 							<div class="portfolio-box-back">
 								<div class="portfolio__title-back">Fritsch Durisotti</div>
 								<div class="portfolio__text-back">Spline Spline is a new way of producing wicker furniture that dramatically. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dignissimos eveniet, ducimus distinctio ratione, earum illum. Maiores cupiditate itaque labore! Laborum blanditiis nihil amet velit voluptatibus deleniti libero repellat dolorum accusamus dolor cupiditate maxime tempora cum totam incidunt repellendus, ipsa voluptas eligendi non mollitia dolores! Vitae consequuntur, dolorum temporibus modi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sequi sapiente fuga odio perferendis soluta?</div>
-								<div class="btn portfolio__btn-back">Back</div>
+								<div class="btn portfolio__btn-back"><a href="#about">contact us</a></div>
 							</div>
-							<div class="btn portfolio__btn">Shop Now</div>
+							<div class="btn portfolio__btn">show now</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="expert" id="Contact">
+		<section class="expert" >
 			<div class="container">
 				<div class="expert-wrap">
 					<h3 class="title-small expert__title-small">services we specialize in</h3>
@@ -529,6 +542,20 @@
 							<div class="expert-slider__title">Agility</div>
 							<p class="expert-slider__text">We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.</p>
 						</div>
+						<div class="expert-slider-box">
+							<svg class="icon">
+								<use xlink:href="#expert-team"></use>
+							</svg>
+							<div class="expert-slider__title">Team</div>
+							<p class="expert-slider__text">Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.</p>
+						</div>
+						<div class="expert-slider-box">
+							<svg class="icon">
+								<use xlink:href="#expert-chat"></use>
+							</svg>
+							<div class="expert-slider__title">Collaboration</div>
+							<p class="expert-slider__text">Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.</p>
+						</div>
 					</div>
 					<!-- <div class="contact">
 						<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
@@ -540,9 +567,10 @@
 
 		</section>
 
-		<section class="contact">
+		<section class="contact" id="contact">
 			<div class="container">
 				<h2 class="contact__text">If you'd like to get in touch, <br>you can send ud an email directly at<a href="">hello@10x<span>.</span>com</a></h2>
+				<h2 class="contact__text contact__text-phone">Or we will be happy to hear you on the phone<a href="#">+71 88 569 6822</a></h2>
 
 			</div>
 		</section>
@@ -550,16 +578,16 @@
 
 	<footer>
 		<section class="footer-logo">
-			<a href="#"><img src="img/logo.png" alt="logo"></a>
+			<a href="#About"><img src="img/logo.png" alt="logo"></a>
 		</section>
 		<section class="footer-navigation">
 			<div class="container">
 				<nav class="footer-nav">
 					<ul class="footer-nav-menu">
-						<li class="footer-nav__item"><a href="#">About</a></li>
-						<li class="footer-nav__item"><a href="#">projects</a></li>
-						<li class="footer-nav__item"><a href="#">Blog</a></li>
-						<li class="footer-nav__item"><a href="#">Contact</a></li>
+						<li class="footer-nav__item"><a href="#About">About</a></li>
+						<li class="footer-nav__item"><a href="#projects">projects</a></li>
+						<li class="footer-nav__item"><a href="#Blog">Blog</a></li>
+						<li class="footer-nav__item"><a href="#Contact">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -638,7 +666,12 @@
 			</div>
 		</section>
 	</footer>
-
+	
+	<div class="top">
+		<svg class="icon-top">
+			<use xlink:href="#aerrow_up-sprite"></use>
+		</svg>
+	</div>
 	
 
 <svg style="display: none;">
@@ -675,11 +708,11 @@
 		</g>
 	</symbol>
 	
-	<symbol id="expert-agility" width="64" height="65" viewBox="0 0 64 65">
+	<symbol id="expert-agility" viewBox="0 0 64 65">
 		<path class="icon-expert" d="M254.741,6936.56H229.434a1.266,1.266,0,0,0-1.259,1.27,2.112,2.112,0,0,1-2.1,2.12h-4.185a2.112,2.112,0,0,1-2.1-2.12,1.265,1.265,0,0,0-1.259-1.27H198.872v-32.62a2.632,2.632,0,0,1,2.624-2.64H217.2l0.011,0.11-2.617,2.49c-0.008.01-.017,0.01-0.026,0.02a12.182,12.182,0,0,0-3.547,8.63v5.67a1.257,1.257,0,0,0,.748,1.16,1.156,1.156,0,0,0,.512.11,1.273,1.273,0,0,0,.844-0.32l5.51-5.02a1.228,1.228,0,0,0,.73.58,15.981,15.981,0,0,0,4.556.67h0.055a16.018,16.018,0,0,0,4.612-.67,1.252,1.252,0,0,0,.741-0.6l5.54,5.04a1.269,1.269,0,0,0,.844.32,1.159,1.159,0,0,0,.512-0.11,1.259,1.259,0,0,0,.748-1.16v-5.66a12.188,12.188,0,0,0-3.547-8.64l-2.42-2.44,0.023-.18H246.5a2.632,2.632,0,0,1,2.624,2.64v23.28a1.26,1.26,0,1,0,2.519,0v-23.28a5.165,5.165,0,0,0-5.143-5.18H231.323a21.183,21.183,0,0,0-5.367-15.8l-0.221-.25a2.152,2.152,0,0,0-1.592-.71h-0.016a2.108,2.108,0,0,0-1.6.74l-0.417.47a21.3,21.3,0,0,0-5.162,15.55H201.5a5.165,5.165,0,0,0-5.143,5.18v32.62h-3.094a1.266,1.266,0,0,0-1.259,1.27v1.98a7.164,7.164,0,0,0,7.13,7.19h49.74a7.165,7.165,0,0,0,7.13-7.19v-1.98A1.266,1.266,0,0,0,254.741,6936.56Zm-24.733-27.08,0.6-4.81,1.039,1.05a9.648,9.648,0,0,1,2.809,6.84v2.81l-4.656-4.24ZM224,6884.89l0.144-.16a18.649,18.649,0,0,1,4.575,14.74l-0.289,2.31h0l-1.212,9.69h0l-0.129,1.04a14.144,14.144,0,0,1-3.111.35h-0.048a13.559,13.559,0,0,1-3.045-.35l-0.992-9.65-0.111-1.09h0l-0.277-2.69A18.733,18.733,0,0,1,224,6884.89Zm-5.791,26.23-4.669,4.25v-2.82a9.654,9.654,0,0,1,2.8-6.82l1.2-1.14Zm30.658,33.34H199.13a4.632,4.632,0,0,1-4.611-4.65v-0.71h22.929a4.637,4.637,0,0,0,4.443,3.39h4.185a4.639,4.639,0,0,0,4.443-3.39h22.962v0.71h0A4.632,4.632,0,0,1,248.87,6944.46Zm-3.605-40.33h-6.34a1.27,1.27,0,0,0,0,2.54h5.08v24.6H204.417v-24.6h4a1.27,1.27,0,0,0,0-2.54h-5.254a1.266,1.266,0,0,0-1.26,1.27v27.14a1.257,1.257,0,0,0,1.26,1.26h42.107a1.257,1.257,0,0,0,1.259-1.26V6905.4A1.266,1.266,0,0,0,245.265,6904.13Zm-21.265-10a1.27,1.27,0,1,1-1.259,1.27A1.266,1.266,0,0,1,224,6894.13Zm26.388,37.35a1.27,1.27,0,1,1-1.26,1.27A1.266,1.266,0,0,1,250.388,6931.48Zm-29.663-14.23a1.266,1.266,0,0,0-1.259,1.27v5.17a1.26,1.26,0,1,0,2.519,0v-5.17A1.266,1.266,0,0,0,220.725,6917.25Zm6.4-.3a1.266,1.266,0,0,0-1.259,1.27v7.62a1.26,1.26,0,1,0,2.519,0v-7.62A1.266,1.266,0,0,0,227.123,6916.95Z" transform="translate(-192 -6882)"/>
 	</symbol>
 
-	<symbol id="expert-team" width="72" height="65" viewBox="0 0 72 65">
+	<symbol id="expert-team" viewBox="0 0 72 65">
 		 <path class="icon-expert" d="M765.648,6881H748.521a4.811,4.811,0,0,0-4.8,4.81v2.21a1.407,1.407,0,0,0,2.813,0v-2.21a1.988,1.988,0,0,1,1.985-1.99h17.127a1.989,1.989,0,0,1,1.986,1.99v2.21a1.406,1.406,0,0,0,2.812,0v-2.21A4.811,4.811,0,0,0,765.648,6881Zm20.486,11.38H727.866a6.883,6.883,0,0,0-6.866,6.88v12.51a1.4,1.4,0,0,0,1.008,1.35l0.857,0.26v29.51a3.107,3.107,0,0,0,3.1,3.11h62.065a3.107,3.107,0,0,0,3.1-3.11v-29.31l0.849-.24a1.416,1.416,0,0,0,1.016-1.35v-12.73A6.883,6.883,0,0,0,786.134,6892.38Zm-52.585,50.8h-7.582a0.29,0.29,0,0,1-.289-0.29v-7.59h4.044a3.834,3.834,0,0,1,3.827,3.83v4.05Zm54.773-.29a0.29,0.29,0,0,1-.29.29h-7.581v-4.05a3.834,3.834,0,0,1,3.827-3.83h4.044v7.59Zm0-10.41h-4.044a6.65,6.65,0,0,0-6.639,6.65v4.05H736.361v-4.05a6.65,6.65,0,0,0-6.639-6.65h-4.044v-18.27l24.828,7.33v4.53a1.408,1.408,0,0,0,1.407,1.41h10.174a1.408,1.408,0,0,0,1.407-1.41v-4.49l24.828-7.18v18.08h0Zm-35-7.82v-6.86h7.362v6.86h-7.362Zm36.868-13.73-26.694,7.72v-2.26a1.407,1.407,0,0,0-1.406-1.41H751.913a1.408,1.408,0,0,0-1.407,1.41v2.22l-26.694-7.89v-11.46a4.061,4.061,0,0,1,4.054-4.06h5.683v4.88a1.406,1.406,0,1,0,2.812,0v-4.88H777.13v4.88a1.406,1.406,0,1,0,2.812,0v-4.88h6.192a4.06,4.06,0,0,1,4.053,4.06v11.67h0Zm-11.65-6.83a1.41,1.41,0,1,1-1.407,1.41A1.414,1.414,0,0,1,778.537,6904.1Zm-43.583,0a1.41,1.41,0,1,1-1.406,1.41A1.413,1.413,0,0,1,734.954,6904.1Z" transform="translate(-721 -6881)"/>
 	</symbol>
 
@@ -726,6 +759,7 @@
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src='js/slick.min.js'></script>
+	<!-- <script src="libs/mmenu/js/jquery.mmenu.all.min.js" type="text/javascript"></script> -->
 	<script src="js/main.js"></script>
 </body>
 </html>
